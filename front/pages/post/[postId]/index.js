@@ -1,35 +1,36 @@
 import React, { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
-import styled from 'styled-components';
-import Parser from 'html-react-parser';
-import axios from 'axios';
 import { END } from 'redux-saga';
 import { getPostRequestAction } from '../../../store/actions/post/getPost.action';
-import CommentForm from '../../../components/CommentForm';
-import CommentList from '../../../components/CommentList';
 import { deletePostRequestAction } from '../../../store/actions/post/deletePost.action';
 import { likePostRequestAction } from '../../../store/actions/post/likePost.action';
 import { unLikePostRequestAction } from '../../../store/actions/post/unLikePost.action';
-import Tags from '../../../components/Tags';
-import BottomInfo from '../../../components/BottomInfo';
-import PostLikeButton from '../../../components/PostLikeButton';
-import PageLayoutWithNav from '../../../components/PageLayoutWithNav';
-import PostAdminButton from '../../../components/PostAdminButton';
-import CommentTotal from '../../../components/CommentTotal';
-import UserCard from '../../../components/UserCard';
+import { AppLoading, PageLayoutWithNav } from '../../../components/layouts';
 import wrapper from '../../../store/configureStore';
 import { loadMeRequestAction } from '../../../store/actions/user/loadme.action';
 import setDefaultCookie from '../../../utils/setDefaultCookie';
+import { getCommentListRequestAction } from '../../../store/actions/comment/getCommentList.action';
+import {
+  CommentList,
+  CommentTotal,
+  PostDetail,
+} from '../../../components/organisms';
+import { CommentForm } from '../../../components/forms';
+import { AdminButton, PostLikeButton } from '../../../components/molecules';
+import { GridWrapper } from '../../../components/atoms';
 
 const Post = () => {
   const router = useRouter();
   const { postId } = router.query;
   const dispatch = useDispatch();
   const { me } = useSelector((state) => state.userReducer);
-  const { getPostLoading, getPostDone, deletePostDone, post } = useSelector(
-    (state) => state.postReducer,
-  );
+  const {
+    getPostLoading,
+    deletePostLoading,
+    deletePostDone,
+    post,
+  } = useSelector((state) => state.postReducer);
   const { commentList } = useSelector((state) => state.commentReducer);
 
   const onClickEditPage = useCallback(() => {
@@ -51,96 +52,57 @@ const Post = () => {
   }, [postId]);
 
   useEffect(() => {
-    dispatch(getPostRequestAction(postId));
-  }, [postId]);
-
-  useEffect(() => {
-    if (deletePostDone && !post) {
+    if (deletePostDone) {
       router.push('/post');
     }
-  }, [deletePostDone, post]);
+  }, [deletePostDone]);
 
-  if (getPostLoading) {
-    return <div>Loading ...</div>;
+  if (getPostLoading || deletePostLoading) {
+    return <AppLoading />;
   }
 
-  const isLiker = !!post?.Likers.find((liker) => liker.id === me?.id);
-  const isAuthor = post?.User.id === me?.id;
+  if (!post) {
+    return <AppLoading />;
+  }
+
+  const isLiker = !!post.Likers.find((liker) => liker.id === me?.id);
+  const isAuthor = post.User.id === me?.id;
 
   return (
-    getPostDone
-    && post && (
-      <PageLayoutWithNav
-        pageName={
-          post.title.length > 20
-            ? `${post.title.substring(0, 20)}...`
-            : post.title
-        }
-      >
-        <Wrapper>
-          <BottomInfo
-            likers={post.Likers.length}
-            view={post.view}
-            comments={commentList?.length}
-          />
-          <Tags tags={['brown', 'cony', '짬뽕']} />
-          <Desc>{Parser(post.desc)}</Desc>
-          <UserCard user={post.User} />
-          <CommentTotal />
-          {me && <CommentForm />}
-          <CommentList />
-        </Wrapper>
+    <PageLayoutWithNav pageName={post.title}>
+      <GridWrapper>
+        <PostDetail post={post} commentsLength={commentList.length} />
+        <CommentTotal />
+        {me && <CommentForm />}
+        <CommentList commentList={commentList} />
 
-        {isAuthor && (
-          <PostAdminButton
+        {me && isAuthor && (
+          <AdminButton
             onClickEditPage={onClickEditPage}
             onClickDelete={onClickDelete}
           />
         )}
+
         {me
           && (isLiker ? (
             <PostLikeButton isLiker={isLiker} onClick={onClickUnLike} />
           ) : (
             <PostLikeButton isLiker={isLiker} onClick={onClickLike} />
           ))}
-      </PageLayoutWithNav>
-    )
+      </GridWrapper>
+    </PageLayoutWithNav>
   );
 };
 
-const Wrapper = styled('div')`
-  display: grid;
-  grid-column: ${(props) => props.theme.space}px;
-  grid-gap: ${(props) => props.theme.space * 2}px;
-`;
-
-const Title = styled('h1')`
-  font-size: 4rem;
-  font-weight: 600;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  display: -webkit-box;
-  word-break: break-all;
-  white-space: nowrap;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-`;
-const Desc = styled('div')`
-  letter-spacing: 0.5px;
-  line-height: 1.5;
-  width: 100%;
-  overflow: hidden;
-  word-wrap: break-word;
-  margin-bottom: ${(props) => props.theme.space}px;
-`;
-
-export const getServerSideProps = wrapper.getServerSideProps(async (context) => {
-  setDefaultCookie(context);
-  context.store.dispatch(loadMeRequestAction());
-  context.store.dispatch(END);
-  await context.store.sagaTask.toPromise();
-});
+export const getServerSideProps = wrapper.getServerSideProps(
+  async (context) => {
+    setDefaultCookie(context);
+    context.store.dispatch(loadMeRequestAction());
+    context.store.dispatch(getPostRequestAction(context.params.postId));
+    context.store.dispatch(getCommentListRequestAction(context.params.postId));
+    context.store.dispatch(END);
+    await context.store.sagaTask.toPromise();
+  },
+);
 
 export default Post;

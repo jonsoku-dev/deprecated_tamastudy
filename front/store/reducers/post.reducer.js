@@ -75,7 +75,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case CREATE_POST_FAIL: {
       draft.createPostLoading = false;
-      draft.createPostDone = true;
+      draft.createPostDone = false;
       draft.createPostError = action.error;
       break;
     }
@@ -95,7 +95,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case GET_POST_LIST_FAIL: {
       draft.getPostListLoading = false;
-      draft.getPostListDone = true;
+      draft.getPostListDone = false;
       draft.getPostListError = action.error;
       break;
     }
@@ -115,7 +115,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case GET_POST_FAIL: {
       draft.getPostLoading = false;
-      draft.getPostDone = true;
+      draft.getPostDone = false;
       draft.getPostError = action.error;
       break;
     }
@@ -135,7 +135,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case EDIT_POST_FAIL: {
       draft.editPostLoading = false;
-      draft.editPostDone = true;
+      draft.editPostDone = false;
       draft.editPostError = action.error;
       break;
     }
@@ -156,7 +156,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case DELETE_POST_FAIL: {
       draft.deletePostLoading = false;
-      draft.deletePostDone = true;
+      draft.deletePostDone = false;
       draft.deletePostError = action.error;
       break;
     }
@@ -176,7 +176,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case LIKE_POST_FAIL: {
       draft.likePostLoading = false;
-      draft.likePostDone = true;
+      draft.likePostDone = false;
       draft.likePostError = action.error;
       break;
     }
@@ -196,7 +196,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case UNLIKE_POST_FAIL: {
       draft.unLikePostLoading = false;
-      draft.unLikePostDone = true;
+      draft.unLikePostDone = false;
       draft.unLikePostError = action.error;
       break;
     }

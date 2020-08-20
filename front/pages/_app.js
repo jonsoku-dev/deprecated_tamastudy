@@ -5,14 +5,14 @@ import { ThemeProvider } from 'styled-components';
 import wrapper from '../store/configureStore';
 import GlobalStyle from '../styles/GlobalStyles';
 import theme from '../styles/theme';
-import AppFooter from '../components/AppFooter';
+import { AppFooter, AppMenu } from '../components/layouts';
 import '../node_modules/react-quill/dist/quill.snow.css';
-import MenuContainer from '../components/MenuContainer';
 
 const Tama = ({ Component }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
+      q
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -21,13 +21,20 @@ const Tama = ({ Component }) => (
         rel="stylesheet"
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
       />
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/css/swiper.min.css"
+      />
       <title>Tama</title>
     </Head>
     <GlobalStyle />
     <ThemeProvider theme={theme}>
-      <MenuContainer />
+      <AppMenu />
       <Component />
       <AppFooter />
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur deleniti dignissimos, dolorem dolores explicabo incidunt nihil quam quas sed. Molestias quos, reiciendis. Accusantium, cum dolorem nam odit tenetur vel.
+      </div>
     </ThemeProvider>
   </>
 );

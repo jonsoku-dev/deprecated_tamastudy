@@ -1,7 +1,7 @@
-const asyncHandler = require("express-async-handler");
-const passport = require("passport");
-const bcrypt = require("bcryptjs");
-const { User } = require("../models");
+const asyncHandler = require('express-async-handler');
+const passport = require('passport');
+const bcrypt = require('bcryptjs');
+const { User } = require('../models');
 
 const generateHashedPassword = asyncHandler(async (password) => {
   const salt = await bcrypt.genSalt(10);
@@ -15,21 +15,18 @@ exports.signUp = asyncHandler(async (req, res, next) => {
     },
   });
   if (user) {
-    return res.status(401).json("이미 유저가 존재합니다. ");
+    return res.status(401).json('이미 유저가 존재합니다. ');
   }
   const hashedPassword = await generateHashedPassword(req.body.password);
-  const newUser = await User.create({
+  await User.create({
     ...req.body,
     password: hashedPassword,
   });
-  res.status(201).json("회원가입이 완료되었습니다. ");
+  res.status(201).json('회원가입이 완료되었습니다. ');
 });
 
-// 1. 컨트롤러로 요청이 들어온다.
 exports.logIn = asyncHandler(async (req, res, next) => {
-  // 2. serializer가 실행된다 .
-  passport.authenticate("local", {}, (err, user, info) => {
-    // 4. serializer로부터 받아온 콜백의 인자들을 이용하여 각각의 로직을 작성한다.
+  passport.authenticate('local', {}, (err, user, info) => {
     if (err) {
       console.error(err);
       next(err);
@@ -47,7 +44,7 @@ exports.logIn = asyncHandler(async (req, res, next) => {
       const existingUser = await User.findOne({
         where: { id: user.id },
         attributes: {
-          exclude: ["password"],
+          exclude: ['password'],
         },
       });
       return res.status(200).json(existingUser);
@@ -58,7 +55,7 @@ exports.logIn = asyncHandler(async (req, res, next) => {
 exports.logOut = asyncHandler(async (req, res, next) => {
   req.logout();
   req.session.destroy();
-  res.status(200).json("로그아웃이 완료되었습니다. ");
+  res.status(200).json('로그아웃이 완료되었습니다. ');
 });
 
 exports.loadMe = asyncHandler(async (req, res, next) => {
@@ -67,7 +64,7 @@ exports.loadMe = asyncHandler(async (req, res, next) => {
 
 // TODO
 exports.loadUser = (req, res, next) => {
-  console.log("loadUser 완료");
+  console.log('loadUser 완료');
   res.status(200).json({
     id: 1,
     msg: true,

@@ -6,28 +6,22 @@ import HomeIcon from '@material-ui/icons/Home';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import { useRouter } from 'next/router';
 import { END } from 'redux-saga';
-import PageLayoutWithNav from '../../components/PageLayoutWithNav';
-import {
-  ButtonWrapper,
-  ErrorMessage,
-  Form,
-  Input,
-} from '../../components/styled/authForm';
+import { AppLoading, PageLayoutWithNav } from '../../components/layouts';
 import { logInRequestAction } from '../../store/actions/user/login.action';
 import wrapper from '../../store/configureStore';
 import { loadMeRequestAction } from '../../store/actions/user/loadme.action';
 import setDefaultCookie from '../../utils/setDefaultCookie';
+import { ButtonWrapper, ErrorMessage, Input } from '../../components/atoms';
 
 const Login = (props) => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { logInDone, logInLoading } = useSelector((state) => state.userReducer);
+  const { loadMeLoading, logInDone, logInLoading, me } = useSelector((state) => state.userReducer);
   const { register, handleSubmit, errors, formState } = useForm({
     mode: 'all',
   });
 
   const onSubmit = useCallback((data) => {
-    console.log(data);
     dispatch(logInRequestAction(data));
   }, []);
 
@@ -36,16 +30,27 @@ const Login = (props) => {
   }, []);
 
   useEffect(() => {
-    if (!logInLoading && logInDone) {
+    if (me) {
       router.back();
     }
-  }, [logInLoading, logInDone]);
+  }, [me]);
+
+  useEffect(() => {
+    if (logInDone) {
+      dispatch(loadMeRequestAction());
+    }
+  }, [logInDone]);
+
+  if (loadMeLoading || logInLoading) {
+    return <AppLoading />;
+  }
 
   return (
     <PageLayoutWithNav pageName="Login">
-      <Form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-        <Input error={errors.email}>
+      <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
+        <Input>
           <input
+            type="text"
             placeholder="Email"
             name="email"
             ref={register({
@@ -61,10 +66,11 @@ const Login = (props) => {
             <ErrorMessage>이메일 형식에 맞지 않습니다.</ErrorMessage>
           )}
           {errors.email?.type === 'maxLength' && (
-            <ErrorMessage>이메일은 100자 이내로 입력해주세요. </ErrorMessage>
+            <ErrorMessage>이메일은 100자 이내로 입력해주세요.</ErrorMessage>
           )}
         </Input>
-        <Input error={errors.password}>
+
+        <Input>
           <input
             placeholder="Password"
             name="password"
@@ -75,10 +81,10 @@ const Login = (props) => {
             <ErrorMessage>필수항목입니다.</ErrorMessage>
           )}
           {errors.password?.type === 'minLength' && (
-            <ErrorMessage>비밀번호는 4자 이상 입력해주세요. </ErrorMessage>
+            <ErrorMessage>비밀번호는 4자 이상 입력해주세요.</ErrorMessage>
           )}
           {errors.password?.type === 'maxLength' && (
-            <ErrorMessage>비밀번호는 100자 이내로 입력해주세요. </ErrorMessage>
+            <ErrorMessage>비밀번호는 100자 이내로 입력해주세요.</ErrorMessage>
           )}
         </Input>
         <ButtonWrapper>
@@ -102,7 +108,7 @@ const Login = (props) => {
             홈으로
           </Button>
         </ButtonWrapper>
-      </Form>
+      </form>
     </PageLayoutWithNav>
   );
 };

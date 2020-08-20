@@ -57,7 +57,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case CREATE_COMMENT_FAIL: {
       draft.createCommentLoading = false;
-      draft.createCommentDone = true;
+      draft.createCommentDone = false;
       draft.createCommentError = action.error;
       break;
     }
@@ -77,7 +77,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case GET_COMMENT_LIST_FAIL: {
       draft.getCommentListLoading = false;
-      draft.getCommentListDone = true;
+      draft.getCommentListDone = false;
       draft.getCommentListError = action.error;
       break;
     }
@@ -97,7 +97,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case EDIT_COMMENT_FAIL: {
       draft.editCommentLoading = false;
-      draft.editCommentDone = true;
+      draft.editCommentDone = false;
       draft.editCommentError = action.error;
       break;
     }
@@ -117,7 +117,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case DELETE_COMMENT_FAIL: {
       draft.deleteCommentLoading = false;
-      draft.deleteCommentDone = true;
+      draft.deleteCommentDone = false;
       draft.deleteCommentError = action.error;
       break;
     }

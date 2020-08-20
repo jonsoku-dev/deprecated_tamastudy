@@ -11,18 +11,11 @@ import HomeIcon from '@material-ui/icons/Home';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import { END } from 'redux-saga';
 import { signUpRequestAction } from '../../store/actions/user/signup.action';
-import {
-  ButtonWrapper,
-  CheckboxWrapper,
-  ErrorMessage,
-  Form,
-  Input,
-  SNSWrapper,
-} from '../../components/styled/authForm';
-import PageLayoutWithNav from '../../components/PageLayoutWithNav';
+import { AppLoading, PageLayoutWithNav } from '../../components/layouts';
 import wrapper from '../../store/configureStore';
 import { loadMeRequestAction } from '../../store/actions/user/loadme.action';
 import setDefaultCookie from '../../utils/setDefaultCookie';
+import { ButtonWrapper, ErrorMessage, Input } from '../../components/atoms';
 
 const Signup = (props) => {
   const [selectedSns, setSelectedSns] = useState(false);
@@ -31,7 +24,6 @@ const Signup = (props) => {
   const router = useRouter();
   const {
     loadMeLoading,
-    loadMeDone,
     me,
     signUpLoading,
     signUpDone,
@@ -61,21 +53,25 @@ const Signup = (props) => {
   }, []);
 
   useEffect(() => {
-    if (!loadMeLoading && loadMeDone && me) {
-      router.push('/login');
-    }
-  }, [me, loadMeDone]);
-
-  useEffect(() => {
-    if (!signUpLoading && signUpDone) {
+    if (me) {
       router.push('/');
     }
-  }, [signUpLoading, signUpDone]);
+  }, [me]);
+
+  useEffect(() => {
+    if (signUpDone) {
+      router.push('/login');
+    }
+  }, [signUpDone]);
+
+  if (loadMeLoading || signUpLoading) {
+    return <AppLoading />;
+  }
 
   return (
     <PageLayoutWithNav pageName="Sign up">
-      <Form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-        <Input error={errors.username}>
+      <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
+        <Input>
           <input
             placeholder="Username"
             name="username"
@@ -85,13 +81,14 @@ const Signup = (props) => {
             <ErrorMessage>필수항목입니다.</ErrorMessage>
           )}
           {errors.username?.type === 'minLength' && (
-            <ErrorMessage>유저명은 2자 이상 입력해주세요. </ErrorMessage>
+            <ErrorMessage>유저명은 2자 이상 입력해주세요.</ErrorMessage>
           )}
           {errors.username?.type === 'maxLength' && (
-            <ErrorMessage>유저명은 10자 이내로 입력해주세요. </ErrorMessage>
+            <ErrorMessage>유저명은 10자 이내로 입력해주세요.</ErrorMessage>
           )}
         </Input>
-        <Input error={errors.email}>
+
+        <Input>
           <input
             placeholder="Email"
             name="email"
@@ -108,10 +105,11 @@ const Signup = (props) => {
             <ErrorMessage>이메일 형식에 맞지 않습니다.</ErrorMessage>
           )}
           {errors.email?.type === 'maxLength' && (
-            <ErrorMessage>이메일은 100자 이내로 입력해주세요. </ErrorMessage>
+            <ErrorMessage>이메일은 100자 이내로 입력해주세요.</ErrorMessage>
           )}
         </Input>
-        <Input error={errors.password}>
+
+        <Input>
           <input
             placeholder="Password"
             name="password"
@@ -122,13 +120,14 @@ const Signup = (props) => {
             <ErrorMessage>필수항목입니다.</ErrorMessage>
           )}
           {errors.password?.type === 'minLength' && (
-            <ErrorMessage>비밀번호는 4자 이상 입력해주세요. </ErrorMessage>
+            <ErrorMessage>비밀번호는 4자 이상 입력해주세요.</ErrorMessage>
           )}
           {errors.password?.type === 'maxLength' && (
-            <ErrorMessage>비밀번호는 100자 이내로 입력해주세요. </ErrorMessage>
+            <ErrorMessage>비밀번호는 100자 이내로 입력해주세요.</ErrorMessage>
           )}
         </Input>
-        <CheckboxWrapper>
+
+        <div>
           <FormControlLabel
             control={(
               <Checkbox
@@ -141,10 +140,10 @@ const Signup = (props) => {
             label="SNS"
             labelPlacement="start"
           />
-        </CheckboxWrapper>
+        </div>
         {selectedSns && (
-          <SNSWrapper>
-            <Input error={errors.facebook}>
+          <div>
+            <Input>
               <input
                 placeholder="facebook"
                 name="facebook"
@@ -152,10 +151,10 @@ const Signup = (props) => {
                 ref={register({ maxLength: 100 })}
               />
               {errors.facebook?.type === 'maxLength' && (
-                <ErrorMessage>100자 까지 입력 가능합니다. </ErrorMessage>
+                <ErrorMessage>100자 까지 입력 가능합니다.</ErrorMessage>
               )}
             </Input>
-            <Input error={errors.twitter}>
+            <Input>
               <input
                 placeholder="twitter"
                 name="twitter"
@@ -163,10 +162,10 @@ const Signup = (props) => {
                 ref={register({ maxLength: 100 })}
               />
               {errors.twitter?.type === 'maxLength' && (
-                <ErrorMessage>100자 까지 입력 가능합니다. </ErrorMessage>
+                <ErrorMessage>100자 까지 입력 가능합니다.</ErrorMessage>
               )}
             </Input>
-            <Input error={errors.github}>
+            <Input>
               <input
                 placeholder="github"
                 name="github"
@@ -174,12 +173,12 @@ const Signup = (props) => {
                 ref={register({ maxLength: 100 })}
               />
               {errors.github?.type === 'maxLength' && (
-                <ErrorMessage>100자 까지 입력 가능합니다. </ErrorMessage>
+                <ErrorMessage>100자 까지 입력 가능합니다.</ErrorMessage>
               )}
             </Input>
-          </SNSWrapper>
+          </div>
         )}
-        <CheckboxWrapper term>
+        <div style={{ textAlign: 'center' }}>
           <FormControlLabel
             control={(
               <Checkbox
@@ -191,7 +190,7 @@ const Signup = (props) => {
             )}
             label="회원가입에 동의하십니까?"
           />
-        </CheckboxWrapper>
+        </div>
         <ButtonWrapper>
           <Button
             type="submit"
@@ -217,7 +216,7 @@ const Signup = (props) => {
             홈으로
           </Button>
         </ButtonWrapper>
-      </Form>
+      </form>
     </PageLayoutWithNav>
   );
 };

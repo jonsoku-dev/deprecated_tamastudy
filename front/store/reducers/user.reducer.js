@@ -15,6 +15,7 @@ import {
   SIGN_UP_FAIL,
   SIGN_UP_REQUEST,
   SIGN_UP_SUCCESS,
+  CLEAR_USER,
 } from '../type';
 
 const initialState = {
@@ -57,7 +58,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
       break;
     case SIGN_UP_FAIL:
       draft.signUpLoading = false;
-      draft.signUpDone = true;
+      draft.signUpDone = false;
       draft.signUpError = action.error;
       break;
       // 로그인
@@ -73,7 +74,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
       break;
     case LOGIN_FAIL:
       draft.logInLoading = false;
-      draft.logInDone = true;
+      draft.logInDone = false;
       draft.logInError = action.error;
       break;
       // 로그아웃
@@ -83,14 +84,26 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
       draft.logOutError = null;
       break;
     case LOGOUT_SUCCESS:
+      draft.me = null;
+      draft.signUpLoading = false;
+      draft.signUpDone = false;
+      draft.signUpError = null;
+      draft.logInLoading = false;
+      draft.logInDone = false;
+      draft.logInError = null;
       draft.logOutLoading = false;
       draft.logOutDone = true;
       draft.logOutError = null;
-      draft.me = null;
+      draft.loadMeLoading = false;
+      draft.loadMeDone = false;
+      draft.loadMeError = null;
+      draft.loadUserLoading = false;
+      draft.loadUserDone = false;
+      draft.loadUserError = null;
       break;
     case LOGOUT_FAIL:
       draft.logOutLoading = false;
-      draft.logOutDone = true;
+      draft.logOutDone = false;
       draft.logOutError = action.error;
       break;
       // 자기정보 불러오기
@@ -100,7 +113,6 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
       draft.loadMeError = null;
       break;
     case LOAD_ME_SUCCESS: {
-      console.log(action.payload);
       draft.loadMeLoading = false;
       draft.loadMeDone = true;
       draft.loadMeError = null;
@@ -109,7 +121,7 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
     }
     case LOAD_ME_FAIL:
       draft.loadMeLoading = false;
-      draft.loadMeDone = true;
+      draft.loadMeDone = false;
       draft.loadMeError = action.error;
       break;
       // 유저정보 불러오기
@@ -125,8 +137,26 @@ const reducer = (state = initialState, action) => produce(state, (draft) => {
       break;
     case LOAD_USER_FAIL:
       draft.loadUserLoading = false;
-      draft.loadUserDone = true;
+      draft.loadUserDone = false;
       draft.loadUserError = action.error;
+      break;
+    case CLEAR_USER:
+      draft.me = null;
+      draft.signUpLoading = false;
+      draft.signUpDone = false;
+      draft.signUpError = null;
+      draft.logInLoading = false;
+      draft.logInDone = false;
+      draft.logInError = null;
+      draft.logOutLoading = false;
+      draft.logOutDone = false;
+      draft.logOutError = null;
+      draft.loadMeLoading = false;
+      draft.loadMeDone = false;
+      draft.loadMeError = null;
+      draft.loadUserLoading = false;
+      draft.loadUserDone = false;
+      draft.loadUserError = null;
       break;
     default:
       break;

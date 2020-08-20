@@ -4,6 +4,8 @@ import { combineReducers } from 'redux';
 import userReducer from './user.reducer';
 import postReducer from './post.reducer';
 import commentReducer from './comment.reducer';
+import categoryReducer from './category.reducer';
+import noticeReducer from './notice.reducer';
 
 const rootReducer = (state, action) => {
   switch (action.type) {
@@ -14,6 +16,8 @@ const rootReducer = (state, action) => {
         userReducer,
         postReducer,
         commentReducer,
+        categoryReducer,
+        noticeReducer,
       });
       return combinedReducer(state, action);
     }
