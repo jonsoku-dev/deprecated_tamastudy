@@ -24,5 +24,15 @@
     "eslint": "^7.7.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11"
+  },
+  "lint-staged" : {
+    "client/src/**/*.{js,jsx}": [
+      "npm run client-prettier",
+      "npm run client-eslint"
+    ],
+    "node_api/src/**/*.{vue,js}": [
+      "npm run node_api-prettier",
+      "npm run node_api-eslint"
+    ]
   }
 }
