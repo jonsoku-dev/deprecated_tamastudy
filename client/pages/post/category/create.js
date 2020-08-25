@@ -7,17 +7,17 @@ import wrapper from '../../../store/configureStore';
 import setDefaultCookie from '../../../utils/setDefaultCookie';
 import { loadMeRequestAction } from '../../../store/actions/user/loadme.action';
 import { getCategoryListRequestAction } from '../../../store/actions/category/getCategoryList.action';
-import { CategoryList } from '../../../components/templates';
+import { CategoryList } from '../../../components/organisms';
 import { CategoryForm } from '../../../components/forms';
 
 const Create = () => {
   const { categoryList, createCategoryLoading } = useSelector(
-    (state) => state.categoryReducer,
+    (state) => state.categoryReducer
   );
 
   const router = useRouter();
   const { loadMeLoading, loadMeError, me } = useSelector(
-    (state) => state.userReducer,
+    (state) => state.userReducer
   );
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(getCategoryListRequestAction());
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 export default Create;

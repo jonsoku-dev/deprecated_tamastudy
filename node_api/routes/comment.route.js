@@ -8,16 +8,16 @@ const {
 } = require('../middlewares/comment');
 const router = express.Router({ mergeParams: true });
 
-// /api/post/:postId/comment/create
+// /node_api/post/:postId/comment/create
 router.post(
   '/create',
   isLoggedIn,
   getCurrentPost,
   commentController.createComment
 );
-// /api/post/:postId/comment/all
+// /node_api/post/:postId/comment/all
 router.get('/all', getCurrentPost, commentController.getCommentList);
-// /api/post/:postId/comment/:commentId/edit
+// /node_api/post/:postId/comment/:commentId/edit
 router.put(
   '/:commentId/edit',
   isLoggedIn,
@@ -26,7 +26,7 @@ router.put(
   isCommentAuthor,
   commentController.editComment
 );
-// /api/post/:postId/comment/:commentId/delete
+// /node_api/post/:postId/comment/:commentId/delete
 router.delete(
   '/:commentId/delete',
   isLoggedIn,
