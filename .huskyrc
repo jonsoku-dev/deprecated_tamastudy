@@ -1,6 +1,0 @@
-{
-    "hooks": {
-        "pre-push": "./huskyhooks/pre-push",
-        "pre-commit": "lint-staged"
-    }
-}

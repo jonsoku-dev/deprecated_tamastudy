@@ -25,14 +25,22 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11"
   },
+  "husky" : {
+    "hooks": {
+        "pre-push": "./huskyhooks/pre-push",
+        "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged" : {
     "client/**/*.{js,jsx}": [
       "npm run client-prettier",
-      "npm run client-eslint"
+      "npm run client-eslint",
+      "git add"
     ],
     "node_api/**/*.{js}": [
       "npm run node_api-prettier",
-      "npm run node_api-eslint"
+      "npm run node_api-eslint",
+      "git add"
     ]
   }
 }
