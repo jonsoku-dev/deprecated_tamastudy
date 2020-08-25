@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "cross-env ANALYZER=true NODE_ENV=production next build",
     "start": "cross-env ANALYZER=true NODE_ENV=production next start -p 80",
-    "lint": "eslint \"**/*.{js,jsx}\" --ignore-pattern node_modules/"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx ."
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -45,6 +46,20 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
-    "prettier": "^2.0.5"
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "../huskyhooks/pre-push",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write .",
+      "npm run lint:fix"
+    ]
   }
 }

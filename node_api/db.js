@@ -9,7 +9,10 @@ const DB_DBNAME = process.env.DB_DBNAME;
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-mysql
+mysql 
+
+
+
   .createConnection({
     host: process.env.DB_HOST || '127.0.0.1',
     port: process.env.DB_PORT || '3306',

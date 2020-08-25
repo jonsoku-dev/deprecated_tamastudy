@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
     "start": "pm2 start app.js",
-    "lint": "eslint \"**/*.{js}\" --ignore-pattern node_modules/",
-    "db:makemigrations": "./node_modules/sequelize-auto-migrations/bin/makemigration.js"
+    "db:makemigrations": "./node_modules/sequelize-auto-migrations/bin/makemigration.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js ."
   },
   "author": "",
   "license": "ISC",
@@ -49,7 +50,7 @@
   "lint-staged": {
     "*.js": [
       "prettier --write .",
-      "git add"
+      "npm run lint:fix"
     ]
   }
 }
