@@ -23,8 +23,8 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,json,css}": [
-      "prettier --write",
+    "node_api/**.*.{js}": [
+      "prettier --write .",
       "git add"
     ]
   },
