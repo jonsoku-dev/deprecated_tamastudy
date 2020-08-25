@@ -1,0 +1,7 @@
+{
+    "web": {
+        "client_id": "33026534455-n6oee3es3uglskeff2d6gd5p9sbl5h4q.apps.googleusercontent.com",
+        "client_secret": "lGPfhuta3dU6FaSraf4jUONH",
+        "redirect_uris": ["http://localhost:3333/api/user/googleCallback"]
+    }
+}
