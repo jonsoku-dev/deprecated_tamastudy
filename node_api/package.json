@@ -9,7 +9,7 @@
     "start": "pm2 start app.js",
     "db:makemigrations": "./node_modules/sequelize-auto-migrations/bin/makemigration.js",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix-dry-run --ext .js ."
+    "lint:fix": "eslint --fix --ext .js ."
   },
   "author": "",
   "license": "ISC",
@@ -48,8 +48,8 @@
     }
   },
   "lint-staged": {
-    "*": [
-      "npx prettier --write .",
+    "*.js": [
+      "prettier --write .",
       "npm run lint:fix"
     ]
   }
