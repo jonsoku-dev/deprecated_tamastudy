@@ -25,7 +25,8 @@ const Home = styled('div')`
 
 const Navigation = styled('div')`
   display: grid;
-  grid-template-columns: ${(props) => (props.isHome ? '1fr' : '1fr minmax(350px, 5fr) 1fr')};
+  grid-template-columns: ${(props) =>
+    props.isHome ? '1fr' : '1fr minmax(350px, 5fr) 1fr'};
   ${(props) => props.isHome && 'padding: 12px;'};
   align-items: center;
 `;

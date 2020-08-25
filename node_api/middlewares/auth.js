@@ -1,4 +1,4 @@
-exports.isLoggedIn = (req, res, next) => {
+module.exports.isLoggedIn = (req, res, next) => {
   if (req.isAuthenticated()) {
     next();
   } else {
@@ -6,7 +6,7 @@ exports.isLoggedIn = (req, res, next) => {
   }
 };
 
-exports.isNotLoggedIn = (req, res, next) => {
+module.exports.isNotLoggedIn = (req, res, next) => {
   if (!req.isAuthenticated()) {
     next();
   } else {
@@ -14,7 +14,7 @@ exports.isNotLoggedIn = (req, res, next) => {
   }
 };
 
-exports.isAdmin = (req, res, next) => {
+module.exports.isAdmin = (req, res, next) => {
   if (req.user.role === 'admin') {
     next();
   } else {

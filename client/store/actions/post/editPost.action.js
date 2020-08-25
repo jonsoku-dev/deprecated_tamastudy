@@ -1,13 +1,18 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { EDIT_POST_FAIL, EDIT_POST_REQUEST, EDIT_POST_SUCCESS } from '../../type';
+import {
+  EDIT_POST_FAIL,
+  EDIT_POST_REQUEST,
+  EDIT_POST_SUCCESS,
+} from '../../type';
 
 export const editPostRequestAction = (data) => ({
   type: EDIT_POST_REQUEST,
   data,
 });
 
-const editPostAPI = (data) => axios.put(`/post/${data.postId}/edit`, data.formData);
+const editPostAPI = (data) =>
+  axios.put(`/post/${data.postId}/edit`, data.formData);
 
 export function* editPost(action) {
   try {

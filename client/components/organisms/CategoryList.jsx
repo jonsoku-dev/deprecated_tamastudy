@@ -39,7 +39,7 @@ const CategoryList = ({ categoryList }) => {
     (categoryId) => () => {
       dispatch(deleteCategoryRequestAction(categoryId));
     },
-    [],
+    []
   );
   return (
     <Wrapper>

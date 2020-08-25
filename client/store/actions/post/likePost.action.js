@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { LIKE_POST_FAIL, LIKE_POST_REQUEST, LIKE_POST_SUCCESS } from '../../type';
+import {
+  LIKE_POST_FAIL,
+  LIKE_POST_REQUEST,
+  LIKE_POST_SUCCESS,
+} from '../../type';
 
 export const likePostRequestAction = (data) => ({
   type: LIKE_POST_REQUEST,

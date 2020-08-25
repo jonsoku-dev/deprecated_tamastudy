@@ -96,7 +96,9 @@ const AppMenu = (props) => {
   const router = useRouter();
   const [showMessage, setShowMessage] = useState(false);
   const dispatch = useDispatch();
-  const { me, loadMeDone, logOutDone } = useSelector((state) => state.userReducer);
+  const { me, loadMeDone, logOutDone } = useSelector(
+    (state) => state.userReducer
+  );
   const [logOutCounter, setLogOutCounter] = useState(0);
   const onClickLogOut = useCallback(() => {
     setLogOutCounter((prev) => prev + 1);

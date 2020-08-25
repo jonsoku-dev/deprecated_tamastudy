@@ -1,5 +1,10 @@
 import { all, fork, takeLatest } from 'redux-saga/effects';
-import { LOAD_ME_REQUEST, LOGIN_REQUEST, LOGOUT_REQUEST, SIGN_UP_REQUEST } from '../type';
+import {
+  LOAD_ME_REQUEST,
+  LOGIN_REQUEST,
+  LOGOUT_REQUEST,
+  SIGN_UP_REQUEST,
+} from '../type';
 import { logIn } from '../actions/user/login.action';
 import { signUp } from '../actions/user/signup.action';
 import { loadMe } from '../actions/user/loadme.action';

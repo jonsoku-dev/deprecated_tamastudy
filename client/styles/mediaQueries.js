@@ -5,4 +5,5 @@ export const breakpoints = {
   dt: 1200, // desktop
 };
 
-export const mediaQueries = (key) => (style) => `@media (min-width: ${breakpoints[key]}px) { ${style} }`;
+export const mediaQueries = (key) => (style) =>
+  `@media (min-width: ${breakpoints[key]}px) { ${style} }`;

@@ -1,5 +1,10 @@
 import { all, fork, takeLatest } from 'redux-saga/effects';
-import { CREATE_COMMENT_REQUEST, DELETE_COMMENT_REQUEST, EDIT_COMMENT_REQUEST, GET_COMMENT_LIST_REQUEST } from '../type';
+import {
+  CREATE_COMMENT_REQUEST,
+  DELETE_COMMENT_REQUEST,
+  EDIT_COMMENT_REQUEST,
+  GET_COMMENT_LIST_REQUEST,
+} from '../type';
 import { createComment } from '../actions/comment/createComment.action';
 import { getCommentList } from '../actions/comment/getCommentList.action';
 import { editComment } from '../actions/comment/editComment.action';

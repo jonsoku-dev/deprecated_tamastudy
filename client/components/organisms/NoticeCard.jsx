@@ -23,8 +23,9 @@ const Td = styled('div')`
   margin: ${(p) => p.theme.space * 2}px 0;
   font-size: 1rem;
   font-weight: ${(p) => (p.th ? 900 : 400)};
-  ${(p) => p.th
-    && css`
+  ${(p) =>
+    p.th &&
+    css`
       text-transform: uppercase;
     `}
 `;
@@ -34,8 +35,9 @@ const Title = styled(Td)`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  ${(p) => p.isTd
-    && css`
+  ${(p) =>
+    p.isTd &&
+    css`
       text-align: left;
       a {
         text-decoration: none;

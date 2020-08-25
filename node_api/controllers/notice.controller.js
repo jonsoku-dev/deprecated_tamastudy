@@ -39,20 +39,20 @@ const findNoticeWithUser = async (noticeId) => {
   });
 };
 
-exports.createNotice = expressAsyncHandler(async (req, res, next) => {
+module.exports.createNotice = expressAsyncHandler(async (req, res) => {
   const newNotice = await Notice.create({
     UserId: req.user.id,
     ...req.body,
   });
   res.status(201).json(newNotice);
 });
-exports.getNoticeList = expressAsyncHandler(async (req, res, next) => {
+module.exports.getNoticeList = expressAsyncHandler(async (req, res) => {
   const offset = req.query.offset ? parseInt(req.query.offset, 10) : 0;
   const limit = req.query.limit ? parseInt(req.query.limit, 10) : null;
   const noticeList = await findNoticeListWithUser(offset, limit);
   res.status(200).json(noticeList);
 });
-exports.getNotice = expressAsyncHandler(async (req, res, next) => {
+module.exports.getNotice = expressAsyncHandler(async (req, res) => {
   const notice = req.notice;
   await notice.increment('view', { by: 1 });
   const result = await findNoticeWithUser(req.params.noticeId);
@@ -60,7 +60,7 @@ exports.getNotice = expressAsyncHandler(async (req, res, next) => {
 
   res.status(200).json(result);
 });
-exports.editNotice = expressAsyncHandler(async (req, res, next) => {
+module.exports.editNotice = expressAsyncHandler(async (req, res) => {
   const notice = req.notice;
 
   await notice.update(req.body, {
@@ -75,7 +75,7 @@ exports.editNotice = expressAsyncHandler(async (req, res, next) => {
 
   res.status(200).json(result);
 });
-exports.deleteNotice = expressAsyncHandler(async (req, res, next) => {
+module.exports.deleteNotice = expressAsyncHandler(async (req, res) => {
   const notice = req.notice;
 
   await notice.destroy();

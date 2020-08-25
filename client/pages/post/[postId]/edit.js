@@ -15,7 +15,7 @@ const EditPost = () => {
   const { me, loadMeLoading } = useSelector((state) => state.userReducer);
   const { categoryList } = useSelector((state) => state.categoryReducer);
   const { post, getPostError, getPostLoading } = useSelector(
-    (state) => state.postReducer,
+    (state) => state.postReducer
   );
 
   useEffect(() => {
@@ -46,13 +46,15 @@ const EditPost = () => {
     </PageLayoutWithNav>
   );
 };
-export const getServerSideProps = wrapper.getServerSideProps(async (context) => {
-  setDefaultCookie(context);
-  context.store.dispatch(loadMeRequestAction());
-  context.store.dispatch(getPostRequestAction(context.params.postId));
-  context.store.dispatch(getCategoryListRequestAction());
-  context.store.dispatch(END);
-  await context.store.sagaTask.toPromise();
-});
+export const getServerSideProps = wrapper.getServerSideProps(
+  async (context) => {
+    setDefaultCookie(context);
+    context.store.dispatch(loadMeRequestAction());
+    context.store.dispatch(getPostRequestAction(context.params.postId));
+    context.store.dispatch(getCategoryListRequestAction());
+    context.store.dispatch(END);
+    await context.store.sagaTask.toPromise();
+  }
+);
 
 export default EditPost;

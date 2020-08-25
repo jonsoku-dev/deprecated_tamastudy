@@ -13,7 +13,7 @@ const Edit = (props) => {
   const router = useRouter();
   const { me, loadMeLoading } = useSelector((state) => state.userReducer);
   const { notice, getNoticeError, getNoticeLoading } = useSelector(
-    (state) => state.noticeReducer,
+    (state) => state.noticeReducer
   );
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(getNoticeRequestAction(context.params.noticeId));
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 export default Edit;

@@ -12,7 +12,9 @@ import { getCategoryListRequestAction } from '../../store/actions/category/getCa
 const Create = () => {
   const router = useRouter();
   const { categoryList } = useSelector((state) => state.categoryReducer);
-  const { loadMeLoading, loadMeError, me } = useSelector((state) => state.userReducer);
+  const { loadMeLoading, loadMeError, me } = useSelector(
+    (state) => state.userReducer
+  );
   const { createPostLoading } = useSelector((state) => state.postReducer);
 
   useEffect(() => {
@@ -43,7 +45,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(getCategoryListRequestAction());
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 export default Create;

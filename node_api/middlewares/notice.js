@@ -1,21 +1,23 @@
 const expressAsyncHandler = require('express-async-handler');
 const { Notice } = require('../models');
 
-exports.getCurrentNotice = expressAsyncHandler(async (req, res, next) => {
-  // notice 찾기
-  const notice = await Notice.findOne({
-    where: {
-      id: req.params.noticeId,
-    },
-  });
-  if (!notice) {
-    return res.status(403).json('Notice가 존재하지 않습니다. ');
+module.exports.getCurrentNotice = expressAsyncHandler(
+  async (req, res, next) => {
+    // notice 찾기
+    const notice = await Notice.findOne({
+      where: {
+        id: req.params.noticeId,
+      },
+    });
+    if (!notice) {
+      return res.status(403).json('Notice가 존재하지 않습니다. ');
+    }
+    req.notice = notice;
+    next();
   }
-  req.notice = notice;
-  next();
-});
+);
 
-exports.isNoticeAuthor = expressAsyncHandler(async (req, res, next) => {
+module.exports.isNoticeAuthor = expressAsyncHandler(async (req, res, next) => {
   if (req.notice.UserId !== req.user.id) {
     return res.status(401).json('Notice 작성자가 아닙니다.');
   }

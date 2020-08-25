@@ -51,11 +51,11 @@ const CommentEditForm = ({ comment, setEditToggle }) => {
           postId,
           commentId: comment.id,
           formData: data,
-        }),
+        })
       );
       setEditToggle(false);
     },
-    [postId, comment],
+    [postId, comment]
   );
 
   return (

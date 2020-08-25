@@ -52,7 +52,7 @@ const PostForm = ({ categoryList }) => {
   const { postId } = router.query;
 
   const { post, createPostDone, editPostDone } = useSelector(
-    (state) => state.postReducer,
+    (state) => state.postReducer
   );
 
   // useForm
@@ -70,7 +70,7 @@ const PostForm = ({ categoryList }) => {
           editPostRequestAction({
             postId,
             formData: { title: data.title, desc, CategoryId: data.CategoryId },
-          }),
+          })
         );
       } else {
         dispatch(
@@ -78,11 +78,11 @@ const PostForm = ({ categoryList }) => {
             title: data.title,
             desc,
             CategoryId: data.CategoryId,
-          }),
+          })
         );
       }
     },
-    [isEdit, postId, desc],
+    [isEdit, postId, desc]
   );
 
   useEffect(() => {

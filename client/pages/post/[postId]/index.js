@@ -102,7 +102,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(getCommentListRequestAction(context.params.postId));
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 export default Post;

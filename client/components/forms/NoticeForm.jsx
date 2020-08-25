@@ -48,7 +48,7 @@ const NoticeForm = () => {
   const router = useRouter();
   const { noticeId } = router.query;
   const { notice, createNoticeDone, editNoticeDone } = useSelector(
-    (state) => state.noticeReducer,
+    (state) => state.noticeReducer
   );
 
   // useForm
@@ -66,18 +66,18 @@ const NoticeForm = () => {
           editNoticeRequestAction({
             noticeId,
             formData: { title: data.title, desc },
-          }),
+          })
         );
       } else {
         dispatch(
           createNoticeRequestAction({
             title: data.title,
             desc,
-          }),
+          })
         );
       }
     },
-    [isEdit, noticeId, desc],
+    [isEdit, noticeId, desc]
   );
 
   useEffect(() => {

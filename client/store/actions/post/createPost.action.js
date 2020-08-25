@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { CREATE_POST_FAIL, CREATE_POST_REQUEST, CREATE_POST_SUCCESS } from '../../type';
+import {
+  CREATE_POST_FAIL,
+  CREATE_POST_REQUEST,
+  CREATE_POST_SUCCESS,
+} from '../../type';
 
 export const createPostRequestAction = (data) => ({
   type: CREATE_POST_REQUEST,

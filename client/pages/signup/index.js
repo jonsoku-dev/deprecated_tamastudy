@@ -22,12 +22,9 @@ const Signup = (props) => {
   const [checkedTerm, setCheckedTerm] = useState(false);
   const dispatch = useDispatch();
   const router = useRouter();
-  const {
-    loadMeLoading,
-    me,
-    signUpLoading,
-    signUpDone,
-  } = useSelector((state) => state.userReducer);
+  const { loadMeLoading, me, signUpLoading, signUpDone } = useSelector(
+    (state) => state.userReducer
+  );
   const { register, handleSubmit, errors, formState } = useForm({
     mode: 'all',
   });
@@ -45,7 +42,7 @@ const Signup = (props) => {
         dispatch(signUpRequestAction(formData));
       }
     },
-    [dispatch, checkedTerm],
+    [dispatch, checkedTerm]
   );
 
   const onClickHome = useCallback(() => {
@@ -223,11 +220,13 @@ const Signup = (props) => {
 
 Signup.propTypes = {};
 
-export const getServerSideProps = wrapper.getServerSideProps(async (context) => {
-  setDefaultCookie(context);
-  context.store.dispatch(loadMeRequestAction());
-  context.store.dispatch(END);
-  await context.store.sagaTask.toPromise();
-});
+export const getServerSideProps = wrapper.getServerSideProps(
+  async (context) => {
+    setDefaultCookie(context);
+    context.store.dispatch(loadMeRequestAction());
+    context.store.dispatch(END);
+    await context.store.sagaTask.toPromise();
+  }
+);
 
 export default Signup;

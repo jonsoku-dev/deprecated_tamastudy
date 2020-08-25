@@ -12,7 +12,7 @@ const Wrapper = styled('div')`
 const CategoryForm = (props) => {
   const dispatch = useDispatch();
   const { createCategoryDone, createCategoryLoading } = useSelector(
-    (state) => state.categoryReducer,
+    (state) => state.categoryReducer
   );
 
   const { register, handleSubmit, errors, reset } = useForm({
@@ -43,10 +43,10 @@ const CategoryForm = (props) => {
         </Input>
       </form>
       {errors.name?.type === 'required' && (
-      <ErrorMessage>필수항목입니다.</ErrorMessage>
+        <ErrorMessage>필수항목입니다.</ErrorMessage>
       )}
       {errors.name?.type === 'maxLength' && (
-      <ErrorMessage>30자 이내로 입력해주세요. </ErrorMessage>
+        <ErrorMessage>30자 이내로 입력해주세요. </ErrorMessage>
       )}
     </Wrapper>
   );

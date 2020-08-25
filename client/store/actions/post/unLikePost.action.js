@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { UNLIKE_POST_FAIL, UNLIKE_POST_REQUEST, UNLIKE_POST_SUCCESS } from '../../type';
+import {
+  UNLIKE_POST_FAIL,
+  UNLIKE_POST_REQUEST,
+  UNLIKE_POST_SUCCESS,
+} from '../../type';
 
 export const unLikePostRequestAction = (data) => ({
   type: UNLIKE_POST_REQUEST,

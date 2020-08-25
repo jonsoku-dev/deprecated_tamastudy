@@ -13,8 +13,9 @@ const Wrapper = styled('div')`
     outline: none;
     border: none;
     border-bottom: 1px solid ${(p) => (p.error ? '#D8000C' : '#737373')};
-    ${(p) => p.error
-      && css`
+    ${(p) =>
+      p.error &&
+      css`
         background-color: #ffd2d2;
       `};
     &::placeholder {

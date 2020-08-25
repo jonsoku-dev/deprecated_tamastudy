@@ -13,7 +13,8 @@ const Wrapper = styled.div`
   align-items: center;
   border-radius: 8px;
   border: 1px solid #eaeaea;
-  padding: ${(props) => props.theme.space * 4}px ${(props) => props.theme.space * 3}px;
+  padding: ${(props) => props.theme.space * 4}px
+    ${(props) => props.theme.space * 3}px;
   &:not(:first-of-type) {
     margin-top: ${(props) => props.theme.space * 2}px;
   }

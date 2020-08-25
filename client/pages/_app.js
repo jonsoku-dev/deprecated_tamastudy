@@ -33,7 +33,10 @@ const Tama = ({ Component }) => (
       <Component />
       <AppFooter />
       <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores consequatur deleniti dignissimos, dolorem dolores explicabo incidunt nihil quam quas sed. Molestias quos, reiciendis. Accusantium, cum dolorem nam odit tenetur vel.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+        consequatur deleniti dignissimos, dolorem dolores explicabo incidunt
+        nihil quam quas sed. Molestias quos, reiciendis. Accusantium, cum
+        dolorem nam odit tenetur vel.
       </div>
     </ThemeProvider>
   </>

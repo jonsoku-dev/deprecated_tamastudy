@@ -59,18 +59,18 @@ const findPostWithUser = async (postId) => {
   });
 };
 
-exports.createPost = expressAsyncHandler(async (req, res, next) => {
+module.exports.createPost = expressAsyncHandler(async (req, res) => {
   const newPost = await Post.create({
     UserId: req.user.id,
     ...req.body,
   });
   res.status(201).json(newPost);
 });
-exports.getPostList = expressAsyncHandler(async (req, res, next) => {
+module.exports.getPostList = expressAsyncHandler(async (req, res) => {
   const postList = await findPostListWithUser();
   res.status(200).json(postList);
 });
-exports.getPost = expressAsyncHandler(async (req, res, next) => {
+module.exports.getPost = expressAsyncHandler(async (req, res) => {
   const post = req.post;
   await post.increment('view', { by: 1 });
   const result = await findPostWithUser(req.params.postId);
@@ -78,7 +78,7 @@ exports.getPost = expressAsyncHandler(async (req, res, next) => {
 
   res.status(200).json(result);
 });
-exports.editPost = expressAsyncHandler(async (req, res, next) => {
+module.exports.editPost = expressAsyncHandler(async (req, res) => {
   const post = req.post;
 
   await post.update(req.body, {
@@ -93,7 +93,7 @@ exports.editPost = expressAsyncHandler(async (req, res, next) => {
 
   res.status(200).json(result);
 });
-exports.deletePost = expressAsyncHandler(async (req, res, next) => {
+module.exports.deletePost = expressAsyncHandler(async (req, res) => {
   const post = req.post;
 
   await post.destroy();
@@ -102,13 +102,13 @@ exports.deletePost = expressAsyncHandler(async (req, res, next) => {
 
   res.status(200).json(parseInt(req.params.postId, 10));
 });
-exports.likePost = expressAsyncHandler(async (req, res, next) => {
+module.exports.likePost = expressAsyncHandler(async (req, res) => {
   const post = req.post;
   await post.addLikers(req.user.id);
   req.post = null;
   res.status(200).json({ UserId: req.user.id });
 });
-exports.unLikePost = expressAsyncHandler(async (req, res, next) => {
+module.exports.unLikePost = expressAsyncHandler(async (req, res) => {
   const post = req.post;
   await post.removeLikers(req.user.id);
   req.post = null;
