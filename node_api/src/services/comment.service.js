@@ -1,4 +1,4 @@
-const { User, Comment } = require('../models');
+const { User, Comment } = require('../db/models');
 
 module.exports.findCommentList = async ({ postId }) => {
   const commentListRecord = await Comment.findAll({

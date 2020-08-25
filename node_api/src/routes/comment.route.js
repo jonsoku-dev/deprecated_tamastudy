@@ -1,11 +1,8 @@
 const express = require('express');
 const commentController = require('../controllers/comment.controller');
-const { isLoggedIn } = require('../middlewares/auth');
-const { getCurrentPost } = require('../middlewares/post');
-const {
-  getCurrentComment,
-  isCommentAuthor,
-} = require('../middlewares/comment');
+const { isLoggedIn } = require('./middlewares/auth');
+const { getCurrentPost } = require('./middlewares/post');
+const { getCurrentComment, isCommentAuthor } = require('./middlewares/comment');
 const router = express.Router({ mergeParams: true });
 
 // /node_api/post/:postId/comment/create

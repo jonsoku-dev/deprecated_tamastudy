@@ -1,5 +1,5 @@
 const expressAsyncHandler = require('express-async-handler');
-const { findCommentById } = require('../services/comment.service');
+const { findCommentById } = require('../../services/comment.service');
 
 module.exports.getCurrentComment = expressAsyncHandler(
   async (req, res, next) => {

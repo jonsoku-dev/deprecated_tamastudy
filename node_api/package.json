@@ -2,11 +2,11 @@
   "name": "node_api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js",
-    "start": "pm2 start app.js",
+    "dev": "nodemon src/app.js",
+    "start": "pm2 start src/app.js",
     "db:makemigrations": "./node_modules/sequelize-auto-migrations/bin/makemigration.js",
     "eslint:fix": "eslint . --ext .js --fix"
   },

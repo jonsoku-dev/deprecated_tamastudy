@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '../.env' });
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const passport = require('passport');
@@ -9,11 +9,9 @@ const morgan = require('morgan');
 const hpp = require('hpp');
 const helmet = require('helmet');
 const app = express();
-const passportConfig = require('./passport');
-require('./mysqlConnector');
+require('./passport')();
 const routes = require('./routes');
-
-passportConfig();
+require('./db/mysqlConnector');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -22,12 +20,12 @@ if (isProd) {
     morgan('combined'),
     helmet(),
     hpp(),
-    cors({ origin: 'http://tamastudy.com', credentials: true })
+    cors({ origin: process.env.FRONT_URI_PROD, credentials: true })
   );
 } else {
   app.use(
     morgan('dev'),
-    cors({ origin: 'http://localhost:3000', credentials: true })
+    cors({ origin: process.env.FRONT_URI_DEV, credentials: true })
   );
 }
 

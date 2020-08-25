@@ -13,7 +13,7 @@ const generateHashedPassword = asyncHandler(async (password) => {
 });
 
 module.exports.signUp = asyncHandler(async (req, res) => {
-  const { user } = await findUserByEmail(req.body.email);
+  const { user } = await findUserByEmail({ email: req.body.email });
   if (user) {
     return res.status(401).json('이미 유저가 존재합니다. ');
   }
@@ -40,7 +40,7 @@ module.exports.logIn = asyncHandler(async (req, res, next) => {
         console.error(loginErr);
         return next(loginErr);
       }
-      const { user: existingUser } = await findUserById(user.id);
+      const { user: existingUser } = await findUserById({ userId: user.id });
       return res.status(200).json(existingUser);
     });
   })(req, res);

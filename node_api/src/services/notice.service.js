@@ -1,4 +1,4 @@
-const { Notice, User } = require('../models');
+const { Notice, User } = require('../db/models');
 
 module.exports.findNoticeList = async ({ offset, limit }) => {
   const noticeListRecord = await Notice.findAll({

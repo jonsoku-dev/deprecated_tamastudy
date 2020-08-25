@@ -1,5 +1,5 @@
 const expressAsyncHandler = require('express-async-handler');
-const { findPostById } = require('../services/post.service');
+const { findPostById } = require('../../services/post.service');
 
 module.exports.getCurrentPost = expressAsyncHandler(async (req, res, next) => {
   const { post } = await findPostById({ postId: req.params.postId });

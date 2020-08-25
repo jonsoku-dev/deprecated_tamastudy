@@ -1,4 +1,4 @@
-const { Category } = require('../models');
+const { Category } = require('../db/models');
 
 module.exports.createCategory = async ({ requestBody }) => {
   const categoryRecord = await Category.create(requestBody);

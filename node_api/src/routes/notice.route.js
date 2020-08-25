@@ -1,8 +1,8 @@
 const express = require('express');
 const noticeController = require('../controllers/notice.controller');
-const { isAdmin } = require('../middlewares/auth');
-const { isLoggedIn } = require('../middlewares/auth');
-const { getCurrentNotice, isNoticeAuthor } = require('../middlewares/notice');
+const { isAdmin } = require('./middlewares/auth');
+const { isLoggedIn } = require('./middlewares/auth');
+const { getCurrentNotice, isNoticeAuthor } = require('./middlewares/notice');
 
 const router = express.Router();
 

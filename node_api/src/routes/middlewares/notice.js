@@ -1,5 +1,5 @@
 const expressAsyncHandler = require('express-async-handler');
-const { findNoticeById } = require('../services/notice.service');
+const { findNoticeById } = require('../../services/notice.service');
 
 module.exports.getCurrentNotice = expressAsyncHandler(
   async (req, res, next) => {

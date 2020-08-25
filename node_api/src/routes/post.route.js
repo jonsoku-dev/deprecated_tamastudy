@@ -1,7 +1,7 @@
 const express = require('express');
 const postController = require('../controllers/post.controller');
-const { isLoggedIn } = require('../middlewares/auth');
-const { getCurrentPost, isPostAuthor } = require('../middlewares/post');
+const { isLoggedIn } = require('./middlewares/auth');
+const { getCurrentPost, isPostAuthor } = require('./middlewares/post');
 const commentRouters = require('./comment.route');
 const categoryRouters = require('./category.route');
 
