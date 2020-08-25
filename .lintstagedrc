@@ -1,0 +1,10 @@
+{
+    "client/src/**/*.{js,jsx}": [
+      "npm run client-prettier",
+      "npm run client-eslint"
+    ],
+    "node_api/src/**/*.{vue,js}": [
+      "npm run node_api-prettier",
+      "npm run node_api-eslint"
+    ]
+}
