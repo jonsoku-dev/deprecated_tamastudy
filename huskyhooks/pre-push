@@ -16,7 +16,7 @@ then
 fi
 if [ "$remote_ref" == "$FORBIDDEN_REF" ]
 then
-    echo "DO NOT PUSH it master"
+    echo "마스터로 PUSH는 금지입니다"
     exit 1 # 금지된 ref 로 push 를 실행하면 에러
 fi
 exit 0
