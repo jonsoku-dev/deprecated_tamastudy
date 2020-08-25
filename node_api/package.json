@@ -48,10 +48,9 @@
     }
   },
   "lint-staged": {
-    "*.{js}": [
-      "npx prettier --write",
-      "npm run lint:fix",
-      "git add"
+    "*": [
+      "npx prettier --write .",
+      "npm run lint:fix"
     ]
   }
 }
