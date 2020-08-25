@@ -1,0 +1,24 @@
+{
+  "name": "tama",
+  "version": "1.0.0",
+  "description": "## 환경변수 설정",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonsoku2/tamastudy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonsoku2/tamastudy/issues"
+  },
+  "homepage": "https://github.com/jonsoku2/tamastudy#readme",
+  "devDependencies": {
+    "husky": "^4.2.5"
+  }
+}
