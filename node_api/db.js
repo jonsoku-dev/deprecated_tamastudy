@@ -7,7 +7,7 @@ const DB_DEV_PASSWORD = process.env.DB_DEV_PASSWORD;
 const DB_PROD_PASSWORD = process.env.DB_PROD_PASSWORD;
 const DB_DBNAME = process.env.DB_DBNAME;
 
-const isProduction =         process.env.NODE_ENV 
+const isProduction =        process.env.NODE_ENV 
                           === 'production';
 
 mysql 
