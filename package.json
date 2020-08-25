@@ -23,25 +23,19 @@
   "devDependencies": {
     "eslint": "^7.7.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11"
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.1.0"
   },
-  "husky" : {
+  "husky": {
     "hooks": {
-        "pre-push": "./huskyhooks/pre-push",
-        "pre-commit": "lint-staged"
+      "pre-push": "./huskyhooks/pre-push",
+      "pre-commit": "lint-staged"
     }
   },
-  "lint-staged" : {
-    "client/**/*.{js,jsx}": [
-      "npm run client-prettier",
-      "npm run client-eslint"
-    ],
-    "node_api/**/*.{js}": [
-      "npm run node_api-prettier",
-      "npm run node_api-eslint"
-    ],
-    "*" : [
-      "git add" 
-   ]
+  "lint-staged": {
+    "*": [
+      "prettier --write .",
+      "git add"
+    ]
   }
 }
