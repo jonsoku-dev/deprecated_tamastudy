@@ -1,11 +1,11 @@
 const expressAsyncHandler = require('express-async-handler');
 const { Category } = require('../models');
 
-exports.createCatrgory = expressAsyncHandler(async (req, res, next) => {
+module.exports.createCatrgory = expressAsyncHandler(async (req, res) => {
   const newCategory = await Category.create(req.body);
   res.status(201).json(newCategory);
 });
-exports.getCatrgoryList = expressAsyncHandler(async (req, res, next) => {
+module.exports.getCatrgoryList = expressAsyncHandler(async (req, res) => {
   const categories = await Category.findAll({
     order: [
       ['id', 'DESC'],
@@ -14,7 +14,7 @@ exports.getCatrgoryList = expressAsyncHandler(async (req, res, next) => {
   });
   res.status(200).json(categories);
 });
-exports.deleteCatrgory = expressAsyncHandler(async (req, res, next) => {
+module.exports.deleteCatrgory = expressAsyncHandler(async (req, res) => {
   const findCategory = await Category.findOne({
     where: {
       id: req.params.categoryId,

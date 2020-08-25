@@ -7,10 +7,9 @@ const DB_DEV_PASSWORD = process.env.DB_DEV_PASSWORD;
 const DB_PROD_PASSWORD = process.env.DB_PROD_PASSWORD;
 const DB_DBNAME = process.env.DB_DBNAME;
 
-const isProduction =        process.env.NODE_ENV 
-                          === 'production';
+const isProduction = process.env.NODE_ENV === 'production';
 
-mysql 
+mysql
   .createConnection({
     host: process.env.DB_HOST || '127.0.0.1',
     port: process.env.DB_PORT || '3306',
@@ -20,7 +19,7 @@ mysql
   .then((connection) => {
     connection
       .query(`CREATE DATABASE IF NOT EXISTS ${DB_DBNAME};`)
-      .then((res) => {
+      .then(() => {
         console.info('Database create or successfully checked');
       })
       .then(() => {
@@ -33,6 +32,6 @@ mysql
       })
       .catch((err) => {
         console.error(err);
-          process.exit(0);
+        process.exit(0);
       });
   });

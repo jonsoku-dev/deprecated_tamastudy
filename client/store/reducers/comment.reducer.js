@@ -93,8 +93,8 @@ const reducer = (state = initialState, action) =>
         draft.editCommentLoading = false;
         draft.editCommentDone = true;
         draft.editCommentError = null;
-        draft.commentList = draft.commentList.map((comment) =>
-          comment.id === action.payload.id ? action.payload : comment
+        draft.commentList = draft.commentList.map(
+          (comment) => (comment.id === action.payload.id ? action.payload : comment)
         );
         break;
       }

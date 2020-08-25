@@ -8,8 +8,7 @@
     "dev": "nodemon app.js",
     "start": "pm2 start app.js",
     "db:makemigrations": "./node_modules/sequelize-auto-migrations/bin/makemigration.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix --ext .js ."
+    "eslint:fix": "eslint . --ext .js --fix"
   },
   "author": "",
   "license": "ISC",
@@ -35,6 +34,8 @@
   },
   "devDependencies": {
     "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.0",
     "sequelize-cli": "^6.2.0"

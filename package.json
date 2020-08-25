@@ -20,15 +20,20 @@
     }
   },
   "lint-staged": {
-    "node_api/**.*.{js}": [
-      "npm run api:prettier"
+    "node_api/**/*.js": [
+      "npm run api:eslint"
+    ],
+    "client/**/*.{js,jsx}": [
+      "npm run client:eslint"
     ]
   },
   "scripts": {
-    "api:prettier": "cd node_api && npx prettier --write ."
+    "api:eslint": "cd node_api && npm run eslint:fix",
+    "client:eslint": "cd client && npm run eslint:fix"
   },
   "devDependencies": {
     "husky": "^4.2.5",
-    "lint-staged": "^10.2.11"
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.1.0"
   }
 }

@@ -19,7 +19,7 @@ mysql
   .then((connection) => {
     connection
       .query(`CREATE DATABASE IF NOT EXISTS ${DB_DBNAME};`)
-      .then((res) => {
+      .then(() => {
         console.info('Database create or successfully checked');
       })
       .then(() => {

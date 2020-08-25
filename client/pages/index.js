@@ -14,7 +14,7 @@ import {
 } from '../components/organisms';
 import { getNoticeListRequestAction } from '../store/actions/notice/getNoticeList.action';
 
-const Wrapper =   styled('div')`
+const Wrapper = styled('div')`
   display: grid;
   grid-template-columns: 100%;
   grid-row-gap: ${(p) => p.theme.space * 6}px;

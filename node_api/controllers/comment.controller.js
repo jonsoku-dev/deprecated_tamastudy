@@ -33,7 +33,7 @@ const findCommentWithUser = async (commentId) => {
   });
 };
 
-exports.createComment = expressAsyncHandler(async (req, res, next) => {
+module.exports.createComment = expressAsyncHandler(async (req, res) => {
   const newComment = await Comment.create({
     ...req.body,
     UserId: req.user.id,
@@ -43,12 +43,12 @@ exports.createComment = expressAsyncHandler(async (req, res, next) => {
   req.post = null;
   res.status(201).json(result);
 });
-exports.getCommentList = expressAsyncHandler(async (req, res, next) => {
+module.exports.getCommentList = expressAsyncHandler(async (req, res) => {
   const result = await findCommentListWithUser(req.params.postId);
   req.post = null;
   res.status(200).json(result || []);
 });
-exports.editComment = expressAsyncHandler(async (req, res, next) => {
+module.exports.editComment = expressAsyncHandler(async (req, res) => {
   const comment = req.comment;
 
   await comment.update(req.body, {
@@ -65,7 +65,7 @@ exports.editComment = expressAsyncHandler(async (req, res, next) => {
 
   res.status(201).json(result);
 });
-exports.deleteComment = expressAsyncHandler(async (req, res, next) => {
+module.exports.deleteComment = expressAsyncHandler(async (req, res) => {
   const comment = req.comment;
 
   await comment.destroy({

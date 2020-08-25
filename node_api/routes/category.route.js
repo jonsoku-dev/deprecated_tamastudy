@@ -1,6 +1,6 @@
 const express = require('express');
 const categoryController = require('../controllers/category.controller');
-const { isLoggedIn, isAdmin } = require('../middlewares/auth');
+const { isLoggedIn } = require('../middlewares/auth');
 const router = express.Router({ mergeParams: true });
 
 // /node_api/post/category/create
