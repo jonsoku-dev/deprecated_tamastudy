@@ -24,7 +24,7 @@
   },
   "lint-staged": {
     "node_api/**.*.{js}": [
-      "prettier --write .",
+      "cd node_api && prettier --write .",
       "git add"
     ]
   },
