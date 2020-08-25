@@ -14,6 +14,9 @@ $ vim .env
 
 이후 mysql 정보를 넣고 저장합니다.
 
+sns 로그인 관련 정보
+https://tamastudy.atlassian.net/browse/JNDS-20?atlOrigin=eyJpIjoiYzA4NTdjZGNmMGMyNDczNmE1YmRmMzE4YTdhYjE1NzkiLCJwIjoiaiJ9
+
 # migration
 
 ```bash
