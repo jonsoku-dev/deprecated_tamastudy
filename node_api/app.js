@@ -15,10 +15,10 @@ const routes = require('./routes');
 
 passportConfig();
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd =  process.env.NODE_ENV === 'production';
 
 if (isProd) {
-    app.use(
+                 app.use(
         morgan('combined'),
         helmet(),
         hpp(),
