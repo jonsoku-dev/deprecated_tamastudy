@@ -24,7 +24,8 @@
   },
   "lint-staged": {
     "client/**/*.{js,jsx}": [
-        "cd client && npx prettier --write"
+        "cd client && npx prettier --write",
+        "git add"
       ]
   },
   "devDependencies": {
