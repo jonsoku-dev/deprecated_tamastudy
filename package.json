@@ -23,8 +23,12 @@
     }
   },
   "lint-staged": {
-    "*": [
-        "cd client && npx prettier --write",
+    "client/*": [
+        "npm test",
+        "git add"
+    ],
+    "node_api/*": [
+        "cd node_api && npx prettier --write",
         "git add"
     ]
   },
