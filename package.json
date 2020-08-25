@@ -26,11 +26,11 @@
     "lint-staged": "^10.2.11"
   },
   "lint-staged" : {
-    "client/src/**/*.{js,jsx}": [
+    "client/**/*.{js,jsx}": [
       "npm run client-prettier",
       "npm run client-eslint"
     ],
-    "node_api/src/**/*.{vue,js}": [
+    "node_api/**/*.{js}": [
       "npm run node_api-prettier",
       "npm run node_api-eslint"
     ]
