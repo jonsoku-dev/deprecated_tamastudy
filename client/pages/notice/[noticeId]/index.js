@@ -31,7 +31,12 @@ const Notice = () => {
     <PageLayoutWithNav pageName={notice.title}>
       <NoticeDetail desc={notice.desc} view={notice.view} />
       <UserCard user={notice.User} />
-      {isAdmin && <AdminButton onClickDelete={onClickDelete} onClickEditPage={onClickEditPage} />}
+      {isAdmin && (
+        <AdminButton
+          onClickDelete={onClickDelete}
+          onClickEditPage={onClickEditPage}
+        />
+      )}
     </PageLayoutWithNav>
   );
 };
@@ -43,7 +48,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(getNoticeRequestAction(context.params.noticeId));
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 export default Notice;

@@ -25,17 +25,5 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "^2.1.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "./huskyhooks/pre-push",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*": [
-      "prettier --write .",
-      "git add"
-    ]
   }
 }

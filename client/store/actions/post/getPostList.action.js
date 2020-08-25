@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { GET_POST_LIST_FAIL, GET_POST_LIST_REQUEST, GET_POST_LIST_SUCCESS } from '../../type';
+import {
+  GET_POST_LIST_FAIL,
+  GET_POST_LIST_REQUEST,
+  GET_POST_LIST_SUCCESS,
+} from '../../type';
 
 export const getPostListRequestAction = () => ({
   type: GET_POST_LIST_REQUEST,

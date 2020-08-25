@@ -1,13 +1,18 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { EDIT_NOTICE_FAIL, EDIT_NOTICE_REQUEST, EDIT_NOTICE_SUCCESS } from '../../type';
+import {
+  EDIT_NOTICE_FAIL,
+  EDIT_NOTICE_REQUEST,
+  EDIT_NOTICE_SUCCESS,
+} from '../../type';
 
 export const editNoticeRequestAction = (data) => ({
   type: EDIT_NOTICE_REQUEST,
   data,
 });
 
-const editNoticeAPI = (data) => axios.put(`/notice/${data.noticeId}/edit`, data.formData);
+const editNoticeAPI = (data) =>
+  axios.put(`/notice/${data.noticeId}/edit`, data.formData);
 
 export function* editNotice(action) {
   try {

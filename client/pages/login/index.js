@@ -16,7 +16,9 @@ import { ButtonWrapper, ErrorMessage, Input } from '../../components/atoms';
 const Login = (props) => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { loadMeLoading, logInDone, logInLoading, me } = useSelector((state) => state.userReducer);
+  const { loadMeLoading, logInDone, logInLoading, me } = useSelector(
+    (state) => state.userReducer
+  );
   const { register, handleSubmit, errors, formState } = useForm({
     mode: 'all',
   });
@@ -121,7 +123,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(loadMeRequestAction());
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 export default Login;

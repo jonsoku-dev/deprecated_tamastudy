@@ -4,7 +4,9 @@ import {
   DELETE_POST_REQUEST,
   EDIT_POST_REQUEST,
   GET_POST_LIST_REQUEST,
-  GET_POST_REQUEST, LIKE_POST_REQUEST, UNLIKE_POST_REQUEST,
+  GET_POST_REQUEST,
+  LIKE_POST_REQUEST,
+  UNLIKE_POST_REQUEST,
 } from '../type';
 import { createPost } from '../actions/post/createPost.action';
 import { getPostList } from '../actions/post/getPostList.action';

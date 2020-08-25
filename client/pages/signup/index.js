@@ -22,12 +22,9 @@ const Signup = (props) => {
   const [checkedTerm, setCheckedTerm] = useState(false);
   const dispatch = useDispatch();
   const router = useRouter();
-  const {
-    loadMeLoading,
-    me,
-    signUpLoading,
-    signUpDone,
-  } = useSelector((state) => state.userReducer);
+  const { loadMeLoading, me, signUpLoading, signUpDone } = useSelector(
+    (state) => state.userReducer
+  );
   const { register, handleSubmit, errors, formState } = useForm({
     mode: 'all',
   });
@@ -45,7 +42,7 @@ const Signup = (props) => {
         dispatch(signUpRequestAction(formData));
       }
     },
-    [dispatch, checkedTerm],
+    [dispatch, checkedTerm]
   );
 
   const onClickHome = useCallback(() => {
@@ -129,14 +126,14 @@ const Signup = (props) => {
 
         <div>
           <FormControlLabel
-            control={(
+            control={
               <Checkbox
                 icon={<AddBoxIcon />}
                 checkedIcon={<IndeterminateCheckBoxIcon />}
                 value={selectedSns}
                 onChange={() => setSelectedSns(!selectedSns)}
               />
-            )}
+            }
             label="SNS"
             labelPlacement="start"
           />
@@ -180,14 +177,14 @@ const Signup = (props) => {
         )}
         <div style={{ textAlign: 'center' }}>
           <FormControlLabel
-            control={(
+            control={
               <Checkbox
                 color="primary"
                 inputProps={{ 'aria-label': 'secondary checkbox' }}
                 value={checkedTerm}
                 onChange={() => setCheckedTerm(!checkedTerm)}
               />
-            )}
+            }
             label="회원가입에 동의하십니까?"
           />
         </div>
@@ -198,9 +195,9 @@ const Signup = (props) => {
             color="primary"
             value="submit"
             disabled={
-              !checkedTerm
-              || !formState.isValid
-              || Object.keys(errors).length > 0
+              !checkedTerm ||
+              !formState.isValid ||
+              Object.keys(errors).length > 0
             }
             endIcon={<PersonAddIcon />}
           >
@@ -223,11 +220,13 @@ const Signup = (props) => {
 
 Signup.propTypes = {};
 
-export const getServerSideProps = wrapper.getServerSideProps(async (context) => {
-  setDefaultCookie(context);
-  context.store.dispatch(loadMeRequestAction());
-  context.store.dispatch(END);
-  await context.store.sagaTask.toPromise();
-});
+export const getServerSideProps = wrapper.getServerSideProps(
+  async (context) => {
+    setDefaultCookie(context);
+    context.store.dispatch(loadMeRequestAction());
+    context.store.dispatch(END);
+    await context.store.sagaTask.toPromise();
+  }
+);
 
 export default Signup;

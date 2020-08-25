@@ -11,7 +11,7 @@ import { PostCard, PostListButtons } from '../../components/organisms';
 const PostList = () => {
   const { me } = useSelector((state) => state.userReducer);
   const { postList, getPostListLoading, getPostListError } = useSelector(
-    (state) => state.postReducer,
+    (state) => state.postReducer
   );
 
   if (getPostListLoading) {
@@ -47,7 +47,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(getPostListRequestAction());
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 export default PostList;

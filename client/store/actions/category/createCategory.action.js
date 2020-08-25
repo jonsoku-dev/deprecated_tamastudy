@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { CREATE_CATEGORY_FAIL, CREATE_CATEGORY_REQUEST, CREATE_CATEGORY_SUCCESS } from '../../type';
+import {
+  CREATE_CATEGORY_FAIL,
+  CREATE_CATEGORY_REQUEST,
+  CREATE_CATEGORY_SUCCESS,
+} from '../../type';
 
 export const createCategoryRequestAction = (data) => ({
   type: CREATE_CATEGORY_REQUEST,

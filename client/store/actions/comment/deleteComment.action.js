@@ -1,13 +1,18 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { DELETE_COMMENT_FAIL, DELETE_COMMENT_REQUEST, DELETE_COMMENT_SUCCESS } from '../../type';
+import {
+  DELETE_COMMENT_FAIL,
+  DELETE_COMMENT_REQUEST,
+  DELETE_COMMENT_SUCCESS,
+} from '../../type';
 
 export const deleteCommentRequestAction = (data) => ({
   type: DELETE_COMMENT_REQUEST,
   data,
 });
 
-const deleteCommentAPI = (data) => axios.delete(`/post/${data.postId}/comment/${data.commentId}/delete`);
+const deleteCommentAPI = (data) =>
+  axios.delete(`/post/${data.postId}/comment/${data.commentId}/delete`);
 
 export function* deleteComment(action) {
   console.log(action.data);

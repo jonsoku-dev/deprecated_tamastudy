@@ -56,7 +56,7 @@ const OpenChatList = (props) => {
       const win = window.open(url, '_blank');
       win.focus();
     },
-    [],
+    []
   );
   return (
     <Wrapper>

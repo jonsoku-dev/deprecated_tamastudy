@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { GET_CATEGORY_LIST_FAIL, GET_CATEGORY_LIST_REQUEST, GET_CATEGORY_LIST_SUCCESS } from '../../type';
+import {
+  GET_CATEGORY_LIST_FAIL,
+  GET_CATEGORY_LIST_REQUEST,
+  GET_CATEGORY_LIST_SUCCESS,
+} from '../../type';
 
 export const getCategoryListRequestAction = () => ({
   type: GET_CATEGORY_LIST_REQUEST,

@@ -58,19 +58,17 @@ const CommentCard = ({ comment }) => {
         deleteCommentRequestAction({
           postId,
           commentId,
-        }),
+        })
       );
     },
-    [postId],
+    [postId]
   );
 
   const currentUserId = me?.id;
 
   return (
     <Wrapper>
-      <UserInfo
-        username={comment.User.username}
-      />
+      <UserInfo username={comment.User.username} />
       <CommentInfo>
         {editToggle ? (
           <CommentEditForm comment={comment} setEditToggle={setEditToggle} />

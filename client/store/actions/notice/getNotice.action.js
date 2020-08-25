@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { GET_NOTICE_FAIL, GET_NOTICE_REQUEST, GET_NOTICE_SUCCESS } from '../../type';
+import {
+  GET_NOTICE_FAIL,
+  GET_NOTICE_REQUEST,
+  GET_NOTICE_SUCCESS,
+} from '../../type';
 
 export const getNoticeRequestAction = (data) => ({
   type: GET_NOTICE_REQUEST,

@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { DELETE_POST_FAIL, DELETE_POST_REQUEST, DELETE_POST_SUCCESS } from '../../type';
+import {
+  DELETE_POST_FAIL,
+  DELETE_POST_REQUEST,
+  DELETE_POST_SUCCESS,
+} from '../../type';
 
 export const deletePostRequestAction = (data) => ({
   type: DELETE_POST_REQUEST,

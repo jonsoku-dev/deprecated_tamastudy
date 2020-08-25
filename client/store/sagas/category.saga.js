@@ -1,5 +1,9 @@
 import { all, fork, takeLatest } from 'redux-saga/effects';
-import { CREATE_CATEGORY_REQUEST, DELETE_CATEGORY_REQUEST, GET_CATEGORY_LIST_REQUEST } from '../type';
+import {
+  CREATE_CATEGORY_REQUEST,
+  DELETE_CATEGORY_REQUEST,
+  GET_CATEGORY_LIST_REQUEST,
+} from '../type';
 import { createCategory } from '../actions/category/createCategory.action';
 import { getCategoryList } from '../actions/category/getCategoryList.action';
 import { deleteCategory } from '../actions/category/deleteCategory.action';

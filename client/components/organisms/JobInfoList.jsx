@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { JobInfoItem } from '../molecules';
 
 const Wrapper = styled('div')`
-  display:grid;
+  display: grid;
   grid-template-columns: 100%;
   grid-gap: ${(p) => p.theme.space * 2}px;
 `;

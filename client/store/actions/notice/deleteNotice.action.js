@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { DELETE_NOTICE_FAIL, DELETE_NOTICE_REQUEST, DELETE_NOTICE_SUCCESS } from '../../type';
+import {
+  DELETE_NOTICE_FAIL,
+  DELETE_NOTICE_REQUEST,
+  DELETE_NOTICE_SUCCESS,
+} from '../../type';
 
 export const deleteNoticeRequestAction = (data) => ({
   type: DELETE_NOTICE_REQUEST,

@@ -77,7 +77,7 @@ const JobInfoItem = (props) => {
       const win = window.open(url, '_blank');
       win.focus();
     },
-    [],
+    []
   );
 
   return (
@@ -102,8 +102,8 @@ const JobInfoItem = (props) => {
             size="small"
             onClick={onClickGoogleMap(
               `https://www.google.co.jp/search?complete=1&hl=ja&q=${encodeURIComponent(
-                'TAMA株式会社',
-              )}&gws_rd=ssl`,
+                'TAMA株式会社'
+              )}&gws_rd=ssl`
             )}
           >
             <SearchIcon />
@@ -115,8 +115,8 @@ const JobInfoItem = (props) => {
             size="small"
             onClick={onClickGoogleMap(
               `https://www.google.com/maps/place/${encodeURIComponent(
-                '川崎市高津区',
-              )}`,
+                '川崎市高津区'
+              )}`
             )}
           >
             <RoomIcon />

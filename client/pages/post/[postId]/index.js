@@ -83,8 +83,8 @@ const Post = () => {
           />
         )}
 
-        {me
-          && (isLiker ? (
+        {me &&
+          (isLiker ? (
             <PostLikeButton isLiker={isLiker} onClick={onClickUnLike} />
           ) : (
             <PostLikeButton isLiker={isLiker} onClick={onClickLike} />
@@ -102,7 +102,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(getCommentListRequestAction(context.params.postId));
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 export default Post;

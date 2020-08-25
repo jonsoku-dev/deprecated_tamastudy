@@ -14,8 +14,8 @@ const Wrapper = styled('div')`
   padding: 20px;
 `;
 const Name = styled('h3')`
-margin-bottom: 16px;
-text-transform: uppercase;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 `;
 
 const TodayNewsItem = ({ name }) => {
@@ -25,12 +25,14 @@ const TodayNewsItem = ({ name }) => {
       const win = window.open(url, '_blank');
       win.focus();
     },
-    [],
+    []
   );
   return (
     <Wrapper>
       <Name>{name}</Name>
-      {array.map((ttt) => <NewsArticle key={ttt} onClickNews={onClickNews} />)}
+      {array.map((ttt) => (
+        <NewsArticle key={ttt} onClickNews={onClickNews} />
+      ))}
     </Wrapper>
   );
 };

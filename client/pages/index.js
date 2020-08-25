@@ -53,7 +53,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(getNoticeListRequestAction({ limit: 3 }));
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 Home.propTypes = {};

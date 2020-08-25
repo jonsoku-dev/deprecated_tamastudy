@@ -9,7 +9,7 @@ const ButtonWrapper = styled('div')`
   display: flex;
   justify-content: center;
   > button {
-    margin : ${(p) => p.theme.space}px;
+    margin: ${(p) => p.theme.space}px;
   }
 `;
 

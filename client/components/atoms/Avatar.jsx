@@ -15,12 +15,14 @@ const Wrapper = styled.div`
   }
 `;
 
-const Avatar = ({ avatar = 'https://image.winudf.com/v2/image1/Y29tLmtha2FvLmZyaWVuZHNzdGlja2VyYXBwX2ljb25fMTU1MDYyMTM4OV8wNjQ/icon.png?w=170&fakeurl=1', size, onClick, ...props }) => (
+const Avatar = ({
+  avatar = 'https://image.winudf.com/v2/image1/Y29tLmtha2FvLmZyaWVuZHNzdGlja2VyYXBwX2ljb25fMTU1MDYyMTM4OV8wNjQ/icon.png?w=170&fakeurl=1',
+  size,
+  onClick,
+  ...props
+}) => (
   <Wrapper size={size} onClick={onClick} {...props}>
-    <img
-      src={avatar}
-      alt=""
-    />
+    <img src={avatar} alt="" />
   </Wrapper>
 );
 

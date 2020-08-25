@@ -1,6 +1,10 @@
 import { call, put } from 'redux-saga/effects';
 import axios from 'axios';
-import { DELETE_CATEGORY_FAIL, DELETE_CATEGORY_REQUEST, DELETE_CATEGORY_SUCCESS } from '../../type';
+import {
+  DELETE_CATEGORY_FAIL,
+  DELETE_CATEGORY_REQUEST,
+  DELETE_CATEGORY_SUCCESS,
+} from '../../type';
 
 export const deleteCategoryRequestAction = (data) => ({
   type: DELETE_CATEGORY_REQUEST,
@@ -8,7 +12,8 @@ export const deleteCategoryRequestAction = (data) => ({
 });
 
 // data => category Id
-const deleteCategoryAPI = (data) => axios.delete(`/post/category/${data}/delete`);
+const deleteCategoryAPI = (data) =>
+  axios.delete(`/post/category/${data}/delete`);
 
 export function* deleteCategory(action) {
   try {

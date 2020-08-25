@@ -29,10 +29,9 @@ const CommentForm = () => {
   const router = useRouter();
   const { postId } = router.query;
   const dispatch = useDispatch();
-  const {
-    createCommentDone,
-    createCommentError,
-  } = useSelector((state) => state.commentReducer);
+  const { createCommentDone, createCommentError } = useSelector(
+    (state) => state.commentReducer
+  );
   const { register, handleSubmit, watch, errors, reset } = useForm();
 
   const onSubmit = useCallback(
@@ -41,10 +40,10 @@ const CommentForm = () => {
         createCommentRequestAction({
           postId,
           formData: data,
-        }),
+        })
       );
     },
-    [postId],
+    [postId]
   );
 
   useEffect(() => {
