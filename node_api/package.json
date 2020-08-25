@@ -50,7 +50,8 @@
   "lint-staged": {
     "*.{js}": [
       "npx prettier --write",
-      "npm run lint:fix"
+      "npm run lint:fix",
+      "git add"
     ]
   }
 }
