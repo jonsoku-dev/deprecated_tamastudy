@@ -83,8 +83,8 @@ const Post = () => {
           />
         )}
 
-        {me
-          && (isLiker ? (
+        {me &&
+          (isLiker ? (
             <PostLikeButton isLiker={isLiker} onClick={onClickUnLike} />
           ) : (
             <PostLikeButton isLiker={isLiker} onClick={onClickLike} />

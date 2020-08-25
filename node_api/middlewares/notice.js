@@ -1,14 +1,10 @@
 const expressAsyncHandler = require('express-async-handler');
-const { Notice } = require('../models');
+const { findNoticeById } = require('../services/notice.service');
 
 module.exports.getCurrentNotice = expressAsyncHandler(
   async (req, res, next) => {
     // notice 찾기
-    const notice = await Notice.findOne({
-      where: {
-        id: req.params.noticeId,
-      },
-    });
+    const { notice } = await findNoticeById({ noticeId: req.params.noticeId });
     if (!notice) {
       return res.status(403).json('Notice가 존재하지 않습니다. ');
     }

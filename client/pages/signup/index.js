@@ -126,14 +126,14 @@ const Signup = (props) => {
 
         <div>
           <FormControlLabel
-            control={(
+            control={
               <Checkbox
                 icon={<AddBoxIcon />}
                 checkedIcon={<IndeterminateCheckBoxIcon />}
                 value={selectedSns}
                 onChange={() => setSelectedSns(!selectedSns)}
               />
-            )}
+            }
             label="SNS"
             labelPlacement="start"
           />
@@ -177,14 +177,14 @@ const Signup = (props) => {
         )}
         <div style={{ textAlign: 'center' }}>
           <FormControlLabel
-            control={(
+            control={
               <Checkbox
                 color="primary"
                 inputProps={{ 'aria-label': 'secondary checkbox' }}
                 value={checkedTerm}
                 onChange={() => setCheckedTerm(!checkedTerm)}
               />
-            )}
+            }
             label="회원가입에 동의하십니까?"
           />
         </div>
@@ -195,9 +195,9 @@ const Signup = (props) => {
             color="primary"
             value="submit"
             disabled={
-              !checkedTerm
-              || !formState.isValid
-              || Object.keys(errors).length > 0
+              !checkedTerm ||
+              !formState.isValid ||
+              Object.keys(errors).length > 0
             }
             endIcon={<PersonAddIcon />}
           >

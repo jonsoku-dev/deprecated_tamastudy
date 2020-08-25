@@ -1,12 +1,10 @@
 const expressAsyncHandler = require('express-async-handler');
-const { Comment } = require('../models');
+const { findCommentById } = require('../services/comment.service');
 
 module.exports.getCurrentComment = expressAsyncHandler(
   async (req, res, next) => {
-    const comment = await Comment.findOne({
-      where: {
-        id: req.params.commentId,
-      },
+    const { comment } = await findCommentById({
+      commentId: req.params.commentId,
     });
     if (!comment) {
       return res.status(403).json('포스트 댓글을 찾을 수 없습니다. ');
