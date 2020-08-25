@@ -15,7 +15,6 @@
   "homepage": "https://github.com/jonsoku2/tamastudy#readme",
   "husky": {
     "hooks": {
-      "pre-push": "./huskyhooks/pre-push",
       "pre-commit": "lint-staged"
     }
   },
