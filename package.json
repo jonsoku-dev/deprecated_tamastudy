@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "aaa",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jonsoku2/tamastudy.git"
@@ -24,8 +21,11 @@
   },
   "lint-staged": {
     "node_api/**.*.{js}": [
-      "cd node_api && prettier --write ."
+      "npm run api:prettier"
     ]
+  },
+  "scripts": {
+    "api:prettier": "cd node_api && npx prettier --write ."
   },
   "devDependencies": {
     "husky": "^4.2.5",
