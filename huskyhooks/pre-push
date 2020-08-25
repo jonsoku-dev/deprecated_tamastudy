@@ -12,7 +12,7 @@ remote_ref=${ARR_GIT_STDIN[2]}
 remote_sha=${ARR_GIT_STDIN[3]}
 if [ "$url" != "$FORBIDDEN_HTTPS_URL" -a "$url" != "$FORBIDDEN_SSH_URL" ]
 then
-    exit 0 # Forked Project 에서는 제한하지 않음
+    exit 0 # Forked Project 에서는 제한하지 않음2
 fi
 if [ "$remote_ref" == "$FORBIDDEN_REF" ]
 then
