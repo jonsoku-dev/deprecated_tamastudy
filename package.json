@@ -4,9 +4,9 @@
   "description": "## 환경변수 설정",
   "main": "index.js",
   "scripts": {
-    "client-prettier": "cd client && prettier --write",
+    "client-prettier": "cd client && prettier --write .",
     "client-eslint": "cd client && npm run lint",
-    "node_api-prettier": "cd node_api && prettier --write",
+    "node_api-prettier": "cd node_api && prettier --write .",
     "node_api-eslint": "cd node_api && npm run lint"
   },
   "repository": {
