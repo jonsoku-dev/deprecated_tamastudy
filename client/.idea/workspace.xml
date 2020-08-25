@@ -20,34 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6abbbcf-02aa-45bf-a85a-ac0845627f5e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../back/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../back/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/controllers/comment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/controllers/comment.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/controllers/notice.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/controllers/notice.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/controllers/post.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/middlewares/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/middlewares/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/middlewares/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/middlewares/comment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/middlewares/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/middlewares/notice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/middlewares/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/middlewares/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/models/category.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/models/category.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/models/comment.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/models/comment.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/models/notice.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/models/notice.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/models/post.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/models/post.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/models/user.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/passport/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/passport/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/passport/local.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/passport/local.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/routes/category.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/routes/category.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/routes/comment.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/routes/comment.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/routes/notice.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/routes/notice.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/routes/post.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/routes/post.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../back/routes/user.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nginx/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nginx/Dockerfile.dev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/molecules/OpenChatItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/molecules/OpenChatItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/actions/notice/getNoticeList.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/store/actions/notice/getNoticeList.action.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,20 +72,20 @@
     <property name="javascript.nodejs.core.library.configured.version" value="14.8.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.6.0" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/forms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v14.8.0/bin/node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -138,6 +127,7 @@
       <workItem from="1597710815007" duration="55218000" />
       <workItem from="1598012907827" duration="52919000" />
       <workItem from="1598221113766" duration="1143000" />
+      <workItem from="1598339089770" duration="1342000" />
     </task>
     <servers />
   </component>
@@ -233,10 +223,10 @@
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
     <state width="1774" height="459" key="GridCell.Tab.3.right/0.23.5120.1417@0.23.5120.1417" timestamp="1598197924921" />
-    <state x="3282" y="370" key="SettingsEditor" timestamp="1598260208746">
+    <state x="3282" y="370" key="SettingsEditor" timestamp="1598339126570">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
-    <state x="3282" y="370" key="SettingsEditor/0.23.5120.1417@0.23.5120.1417" timestamp="1598260208746" />
+    <state x="3282" y="370" key="SettingsEditor/0.23.5120.1417@0.23.5120.1417" timestamp="1598339126570" />
     <state x="3167" y="310" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597247986911">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>

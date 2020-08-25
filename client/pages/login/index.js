@@ -12,11 +12,14 @@ import wrapper from '../../store/configureStore';
 import { loadMeRequestAction } from '../../store/actions/user/loadme.action';
 import setDefaultCookie from '../../utils/setDefaultCookie';
 import { ButtonWrapper, ErrorMessage, Input } from '../../components/atoms';
+import { getNoticeListRequestAction } from '../../store/actions/notice/getNoticeList.action';
 
 const Login = (props) => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { loadMeLoading, logInDone, logInLoading, me } = useSelector((state) => state.userReducer);
+  const { loadMeLoading, logInDone, logInLoading, me } = useSelector(
+    (state) => state.userReducer
+  );
   const { register, handleSubmit, errors, formState } = useForm({
     mode: 'all',
   });
@@ -41,9 +44,9 @@ const Login = (props) => {
     }
   }, [logInDone]);
 
-  if (loadMeLoading || logInLoading) {
-    return <AppLoading />;
-  }
+  // if (loadMeLoading || logInLoading) {
+  //   return <AppLoading />;
+  // }
 
   return (
     <PageLayoutWithNav pageName="Login">
@@ -121,7 +124,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     context.store.dispatch(loadMeRequestAction());
     context.store.dispatch(END);
     await context.store.sagaTask.toPromise();
-  },
+  }
 );
 
 export default Login;

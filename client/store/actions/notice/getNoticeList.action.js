@@ -7,8 +7,6 @@ import {
 } from '../../type';
 
 export const getNoticeListRequestAction = (data) => {
-  console.log(data);
-
   return {
     type: GET_NOTICE_LIST_REQUEST,
     data,

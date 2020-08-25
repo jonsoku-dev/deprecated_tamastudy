@@ -1,0 +1,23 @@
+version: "3"
+services:
+  node_api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./node_api
+    volumes:
+      - /app/node_modules
+      - ./node_api:/app
+    ports:
+      - 5000:5000
+    env_file:
+      - .env
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    volumes:
+      - /app/node_modules
+      - /app/.next
+      - ./client:/app
+    ports:
+      - 3000:3000

@@ -8,9 +8,9 @@ import { MainItemLayout, PageLayoutWithNav } from '../components/layouts';
 import {
   ApiList,
   JobInfoList,
+  NoticeMainList,
   OpenChatList,
   TodayNewsList,
-  NoticeMainList,
 } from '../components/organisms';
 import { getNoticeListRequestAction } from '../store/actions/notice/getNoticeList.action';
 
