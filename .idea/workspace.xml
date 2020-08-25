@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:JNDS-7" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:JNDS-7" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feat" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:JNDS-8" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:JNDS-8" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feat" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:JNDS-7" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:JNDS-7" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feat" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4c469af7-da8b-4982-88a0-376d55807c22" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_api/mysqlConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.idea/back.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/config/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/controllers/category.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/controllers/comment.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/controllers/notice.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/controllers/post.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/controllers/user.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/middlewares/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/middlewares/comment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/middlewares/notice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/middlewares/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/category.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/comment.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/notice.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/post.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/models/user.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/passport/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/passport/local.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/category.route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/comment.route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/notice.route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/post.route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/routes/user.route.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.eslintrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/front.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/jsLinters/eslint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/atoms/Avatar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/atoms/BaseWrapper.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/atoms/ButtonWrapper.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/atoms/Desc.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/atoms/ErrorMessage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/atoms/GridWrapper.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/atoms/Input.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/atoms/Tag.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/atoms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/forms/CategoryForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/forms/CommentEditForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/forms/CommentForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/forms/NoticeForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/forms/PostForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/forms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/layouts/AppFooter.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/layouts/AppHeader.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/layouts/AppLoading.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/layouts/AppMenu.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/layouts/MainItemLayout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/layouts/PageLayoutWithNav.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/layouts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/AdminButton.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/BottomInfo.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/Category.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/CreateButton.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/JobInfoItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/NewsArticle.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/NoticeMainItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/OpenChatItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/PostLikeButton.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/TodayNewsItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/UserInfo.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/molecules/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/ApiList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/CategoryList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/CommentCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/CommentList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/CommentTotal.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/JobInfoList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/NoticeCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/NoticeDetail.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/NoticeMainList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/OpenChatList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/PostCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/PostDetail.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/PostListButtons.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/QuillWrapper.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/Tags.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/TodayNewsList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/UserCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/components/organisms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/hook/useInput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/_document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/api/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/job/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/login/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/notice/[noticeId]/edit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/notice/[noticeId]/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/notice/create.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/notice/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/post/[postId]/edit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/post/[postId]/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/post/category/create.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/post/create.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/post/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/signup/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/pages/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/quill/formats.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/quill/modules.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/category/createCategory.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/category/deleteCategory.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/category/getCategoryList.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/comment/createComment.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/comment/deleteComment.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/comment/editComment.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/comment/getCommentList.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/notice/createNotice.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/notice/deleteNotice.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/notice/editNotice.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/notice/getNotice.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/notice/getNoticeList.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/post/createPost.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/post/deletePost.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/post/editPost.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/post/getPost.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/post/getPostList.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/post/likePost.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/post/unLikePost.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/user/clearUser.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/user/loadme.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/user/login.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/user/logout.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/actions/user/signup.action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/configureStore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/reducers/category.reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/reducers/comment.reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/reducers/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/reducers/notice.reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/reducers/post.reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/reducers/user.reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/sagas/category.saga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/sagas/comment.saga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/sagas/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/sagas/notice.saga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/sagas/post.saga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/sagas/user.saga.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/store/type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/styles/GlobalStyles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/styles/Home.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/styles/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/styles/mediaQueries.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/styles/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/utils/setDefaultCookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gY7rdH5JJsryeqUfMOAe2YVsmi" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_api/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c469af7-da8b-4982-88a0-376d55807c22" name="Default Changelist" comment="" />
+      <created>1598279872302</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598279872302</updated>
+      <workItem from="1598279873411" duration="4462000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2425" y="289" width="1464" height="859" key="DiffContextDialog" timestamp="1598289180427">
+      <screen x="0" y="23" width="5120" height="1417" />
+    </state>
+    <state x="2425" y="289" width="1464" height="859" key="DiffContextDialog/0.23.5120.1417@0.23.5120.1417" timestamp="1598289180427" />
+    <state x="2564" y="379" key="SettingsEditor" timestamp="1598322580476">
+      <screen x="0" y="23" width="5120" height="1417" />
+    </state>
+    <state x="2564" y="379" key="SettingsEditor/0.23.5120.1417@0.23.5120.1417" timestamp="1598322580476" />
+    <state x="2425" y="289" width="1464" height="859" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1598289180427">
+      <screen x="0" y="23" width="5120" height="1417" />
+    </state>
+    <state x="2425" y="289" width="1464" height="859" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.5120.1417@0.23.5120.1417" timestamp="1598289180427" />
+    <state x="2822" y="424" width="670" height="676" key="search.everywhere.popup" timestamp="1598321325830">
+      <screen x="0" y="23" width="5120" height="1417" />
+    </state>
+    <state x="2822" y="424" width="670" height="676" key="search.everywhere.popup/0.23.5120.1417@0.23.5120.1417" timestamp="1598321325830" />
+  </component>
+</project>
