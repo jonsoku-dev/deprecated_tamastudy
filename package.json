@@ -1,0 +1,34 @@
+{
+  "name": "tama",
+  "version": "1.0.0",
+  "description": "## 환경변수 설정",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonsoku2/tamastudy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonsoku2/tamastudy/issues"
+  },
+  "homepage": "https://github.com/jonsoku2/tamastudy#readme",
+  "husky": {
+    "hooks": {
+      "pre-push": "./huskyhooks/pre-push",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "client/**/*.{js,jsx}": [
+        "cd client && npx prettier --write"
+      ]
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11"
+  }
+}
