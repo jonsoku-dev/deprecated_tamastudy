@@ -39,9 +39,6 @@
     "node_api/**/*.{js}": [
       "npm run node_api-prettier",
       "npm run node_api-eslint"
-    ],
-    "*" : [
-      "git add" 
-   ]
+    ]
   }
 }
