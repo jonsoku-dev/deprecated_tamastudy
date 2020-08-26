@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74812bcb-33e7-47dd-b4d8-c480a8f19ef3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/Unit/Services/user.service.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/db-env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/config/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/mysqlConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/mysqlConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Unit/Services/user.service.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Unit/Services/user.service.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
