@@ -12,14 +12,13 @@ const {
 mysql
   .createConnection({
     host: DB_HOST,
-    database: DB_DBNAME,
     port: DB_PORT,
     user: DB_USERNAME,
     password: DB_PASSWORD,
   })
   .then((connection) => {
     connection
-      .query(`CREATE DATABASE IF NOT EXISTS tamastudy_test;`)
+      .query(`CREATE DATABASE IF NOT EXISTS ${DB_DBNAME};`)
       .then(() => {
         console.info('Database create or successfully checked');
       })
