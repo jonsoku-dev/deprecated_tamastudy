@@ -25,6 +25,7 @@ import {
 
 const initialState = {
   postList: [],
+  pageInfo: {},
   post: null,
   // 포스트 생성
   createPostLoading: false,
@@ -91,7 +92,8 @@ const reducer = (state = initialState, action) =>
         draft.getPostListLoading = false;
         draft.getPostListDone = true;
         draft.getPostListError = null;
-        draft.postList = action.payload;
+        draft.postList = [...draft.postList, ...action.payload.postList];
+        draft.pageInfo = action.payload.pageInfo;
         break;
       }
       case GET_POST_LIST_FAIL: {

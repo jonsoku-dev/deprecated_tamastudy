@@ -1,4 +1,7 @@
 const expressAsyncHandler = require('express-async-handler');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
 const {
   findPostById,
   findPostList,
@@ -15,8 +18,33 @@ module.exports.createPost = expressAsyncHandler(async (req, res) => {
 });
 
 module.exports.getPostList = expressAsyncHandler(async (req, res) => {
-  const { postList } = await findPostList();
-  res.status(200).json(postList);
+  const cursor = req.query.cursor;
+  const limit = parseInt(req.query.limit, 10) || 5;
+  let query = {};
+
+  if (cursor) {
+    query = {
+      where: {
+        id: {
+          [Op.lt]: cursor,
+        },
+      },
+    };
+  }
+
+  query = { ...query, limit: limit + 1 };
+
+  let { postList } = await findPostList({ query });
+  const hasNextPage = postList.length > limit;
+  postList = hasNextPage ? postList.slice(0, -1) : postList;
+  console.log(postList.length > limit);
+  res.status(200).json({
+    postList,
+    pageInfo: {
+      nextPageCursor: hasNextPage ? postList[postList.length - 1].id : null,
+      hasNextPage,
+    },
+  });
 });
 
 module.exports.getPost = expressAsyncHandler(async (req, res) => {
