@@ -20,35 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74812bcb-33e7-47dd-b4d8-c480a8f19ef3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/migrations/20200826072251-create-users-table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/migrations/20200826072252-create-categories-table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/migrations/20200826072335-create-posts-table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/migrations/20200826072444-create-comments-table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/migrations/20200826072516-create-notices-table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/migrations/20200826072541-create-Like-table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/comment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/comment.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/notice.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/notice.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/post.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/comment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/notice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/category.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/category.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/comment.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/comment.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/notice.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/notice.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/post.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/post.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passport/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/passport/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/passport/local.js" beforeDir="false" afterPath="$PROJECT_DIR$/passport/local.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/category.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/category.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/comment.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/comment.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/notice.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/notice.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/post.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/post.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../front/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/config/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/migrations/1-mega-migration.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/migrations/_current.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/models/category.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/models/category.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/models/comment.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/models/comment.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/models/notice.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/models/notice.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/models/post.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/models/post.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/models/user.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/models/user.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/mysqlConnector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/mysqlConnector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Unit/Services/user.service.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Unit/Services/user.service.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,18 +61,34 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
-    <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/test/Unit/Services" />
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/src/routes" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/db/models" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -111,6 +120,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="3905" y="520" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598371385538">
+      <screen x="0" y="23" width="5120" height="1417" />
+    </state>
+    <state x="3905" y="520" key="#com.intellij.fileTypes.FileTypeChooser/0.23.5120.1417@0.23.5120.1417" timestamp="1598371385538" />
+    <state x="3396" y="123" width="1545" height="1195" key="DiffContextDialog" timestamp="1598404374151">
+      <screen x="0" y="23" width="5120" height="1417" />
+    </state>
+    <state x="3396" y="123" width="1545" height="1195" key="DiffContextDialog/0.23.5120.1417@0.23.5120.1417" timestamp="1598404374151" />
     <state x="2363" y="357" key="RollbackChangesDialog" timestamp="1597441851055">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
@@ -119,10 +136,18 @@
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
     <state x="1973" y="501" key="SettingsEditor/0.23.5120.1417@0.23.5120.1417" timestamp="1598260217014" />
+    <state x="3396" y="123" width="1545" height="1195" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1598404374152">
+      <screen x="0" y="23" width="5120" height="1417" />
+    </state>
+    <state x="3396" y="123" width="1545" height="1195" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.5120.1417@0.23.5120.1417" timestamp="1598404374152" />
     <state x="2395" y="648" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597447764048">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
     <state x="2395" y="648" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.5120.1417@0.23.5120.1417" timestamp="1597447764048" />
+    <state x="3876" y="459" width="584" height="580" key="find.popup" timestamp="1598419385446">
+      <screen x="0" y="23" width="5120" height="1417" />
+    </state>
+    <state x="3876" y="459" width="584" height="580" key="find.popup/0.23.5120.1417@0.23.5120.1417" timestamp="1598419385446" />
     <state x="1702" y="348" width="670" height="676" key="search.everywhere.popup" timestamp="1597613418134">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>

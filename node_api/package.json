@@ -2,13 +2,18 @@
   "name": "node_api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js",
-    "start": "pm2 start app.js",
-    "db:makemigrations": "./node_modules/sequelize-auto-migrations/bin/makemigration.js",
-    "eslint:fix": "eslint . --ext .js --fix"
+    "test": "npx env NODE_ENV=test mocha src/test/**/*.*.test.js --reporter spec --exit",
+    "dev": "nodemon src/app.js",
+    "start": "pm2 start src/app.js",
+    "eslint:fix": "eslint . --ext .js --fix",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:migrate:undo:": "npx sequelize-cli db:migrate:undo",
+    "db:migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
+    "db:seed:all": "npx sequelize-cli db:seed:all ",
+    "db:seed:undo:all": "npx sequelize-cli db:seed:undo:all",
+    "db:create": "npx env NODE_ENV=test sequelize-cli db:create && npx env NODE_ENV=production sequelize-cli db:create && npx env NODE_ENV=development sequelize-cli db:create"
   },
   "author": "",
   "license": "ISC",
@@ -33,14 +38,20 @@
     "pm2": "^4.4.1",
     "sequelize": "^6.3.4",
     "sequelize-auto-migrations": "^1.0.3",
-    "server-destroy": "^1.0.1"
+    "server-destroy": "^1.0.1",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
+    "assert": "^2.0.0",
+    "chai": "^4.2.0",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "faker": "^5.0.0",
+    "mocha": "^8.1.2",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.0",
+    "request": "^2.88.2",
     "sequelize-cli": "^6.2.0"
   }
 }
