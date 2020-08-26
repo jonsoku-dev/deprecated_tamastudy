@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "test": "npx mocha src/test/**/*.*.test.js --reporter spec --exit",
+    "test": "npx env NODE_ENV=test mocha src/test/**/*.*.test.js --reporter spec --exit",
     "dev": "nodemon src/app.js",
     "start": "pm2 start src/app.js",
     "db:makemigrations": "./node_modules/sequelize-auto-migrations/bin/makemigration.js",

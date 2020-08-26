@@ -14,6 +14,7 @@ const routes = require('./routes');
 require('./db/mysqlConnector');
 
 const isProd = process.env.NODE_ENV === 'production';
+console.log(process.env.NODE_ENV);
 
 if (isProd) {
   app.use(

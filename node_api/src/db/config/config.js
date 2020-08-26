@@ -1,17 +1,16 @@
 require('dotenv').config();
-
-const DB_USERNAME = process.env.DB_USERNAME;
-const DB_DEV_PASSWORD = process.env.DB_DEV_PASSWORD;
-const DB_TEST_PASSWORD = process.env.DB_TEST_PASSWORD;
-const DB_PROD_PASSWORD = process.env.DB_PROD_PASSWORD;
-const DB_DBNAME = process.env.DB_DBNAME;
-const DB_HOST = process.env.DB_HOST;
-const DB_PORT = process.env.DB_PORT;
+const {
+  DB_USERNAME,
+  DB_PASSWORD,
+  DB_DBNAME,
+  DB_HOST,
+  DB_PORT,
+} = require('../db-env');
 
 module.exports = {
   development: {
     username: DB_USERNAME,
-    password: DB_DEV_PASSWORD,
+    password: DB_PASSWORD,
     database: DB_DBNAME,
     host: DB_HOST,
     port: DB_PORT,
@@ -20,7 +19,7 @@ module.exports = {
   },
   test: {
     username: DB_USERNAME,
-    password: DB_TEST_PASSWORD,
+    password: DB_PASSWORD,
     database: DB_DBNAME,
     host: DB_HOST,
     port: DB_PORT,
@@ -28,7 +27,7 @@ module.exports = {
   },
   production: {
     username: DB_USERNAME,
-    password: DB_PROD_PASSWORD,
+    password: DB_PASSWORD,
     database: DB_DBNAME,
     host: DB_HOST,
     port: DB_PORT,
