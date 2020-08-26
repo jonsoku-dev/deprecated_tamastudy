@@ -4,13 +4,15 @@ const DB_USERNAME = process.env.DB_USERNAME;
 const DB_DEV_PASSWORD = process.env.DB_DEV_PASSWORD;
 const DB_PROD_PASSWORD = process.env.DB_PROD_PASSWORD;
 const DB_DBNAME = process.env.DB_DBNAME;
+const DB_HOST = process.env.DB_HOST;
+const DB_PORT = process.env.DB_PORT;
 
 const isProd = process.env.NODE_ENV === 'production';
 
 mysql
   .createConnection({
-    host: process.env.DB_HOST || '127.0.0.1',
-    port: process.env.DB_PORT || '3306',
+    host: DB_HOST,
+    port: DB_PORT,
     user: DB_USERNAME,
     password: isProd ? DB_PROD_PASSWORD : DB_DEV_PASSWORD,
   })

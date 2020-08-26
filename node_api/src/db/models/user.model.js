@@ -6,11 +6,11 @@ module.exports = class User extends Model {
     return super.init(
       {
         username: {
-          type: DataTypes.STRING(20),
+          type: DataTypes.STRING(255),
           allowNull: false,
         },
         email: {
-          type: DataTypes.STRING(30),
+          type: DataTypes.STRING(255),
           allowNull: false,
           unique: true,
         },
@@ -20,20 +20,20 @@ module.exports = class User extends Model {
           defaultValue: 'normal',
         },
         password: {
-          type: DataTypes.STRING(100),
+          type: DataTypes.STRING(255),
           allowNull: false, // 필수 (required의 의미)
         },
         avatar: {
-          type: DataTypes.STRING(100),
+          type: DataTypes.STRING(255),
         },
         facebook: {
-          type: DataTypes.STRING(100),
+          type: DataTypes.STRING(255),
         },
         twitter: {
-          type: DataTypes.STRING(100),
+          type: DataTypes.STRING(255),
         },
         github: {
-          type: DataTypes.STRING(100),
+          type: DataTypes.STRING(255),
         },
       },
       {

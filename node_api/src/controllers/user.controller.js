@@ -1,33 +1,27 @@
 const asyncHandler = require('express-async-handler');
 const passport = require('passport');
-const bcrypt = require('bcryptjs');
+const { generateHashedPassword } = require('../helper/auth');
+
 const {
   findUserByEmail,
   createUser,
   findUserById,
 } = require('../services/user.service');
 
-const generateHashedPassword = asyncHandler(async (password) => {
-  const salt = await bcrypt.genSalt(10);
-  return await bcrypt.hash(password, salt);
-});
-
-module.exports.signUp = asyncHandler(async (req, res) => {
+module.exports.signUp = asyncHandler(async (req, res, next) => {
   const { user } = await findUserByEmail({ email: req.body.email });
   if (user) {
     return res.status(401).json('이미 유저가 존재합니다. ');
   }
-  const hashedPassword = await generateHashedPassword(req.body.password);
+  const hashedPassword = await generateHashedPassword(req.body.password, next);
   await createUser({
-    ...req.body,
-    password: hashedPassword,
+    requestBody: { ...req.body, password: hashedPassword },
   });
   res.status(201).json('회원가입이 완료되었습니다.');
 });
 
 module.exports.logIn = asyncHandler(async (req, res, next) => {
   passport.authenticate('local', {}, (err, user, info) => {
-    console.log(user);
     if (err) {
       console.error(err);
       next(err);

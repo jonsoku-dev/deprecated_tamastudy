@@ -5,9 +5,6 @@ module.exports.findUserById = async ({ userId }) => {
     where: {
       id: userId,
     },
-    attributes: {
-      exclude: ['password'],
-    },
   });
   return { user: userRecord };
 };
@@ -16,9 +13,6 @@ module.exports.findUserByEmail = async ({ email }) => {
   const userRecord = await User.findOne({
     where: {
       email,
-    },
-    attributes: {
-      exclude: ['password'],
     },
   });
   return { user: userRecord };

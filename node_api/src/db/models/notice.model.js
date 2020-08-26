@@ -6,11 +6,11 @@ module.exports = class Notice extends Model {
     return super.init(
       {
         title: {
-          type: DataTypes.STRING(50),
+          type: DataTypes.STRING(255),
           allowNull: false,
         },
         desc: {
-          type: DataTypes.STRING(1000),
+          type: DataTypes.STRING(10000),
           allowNull: false,
         },
         view: {

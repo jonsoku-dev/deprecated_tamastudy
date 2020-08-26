@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const DB_USERNAME = process.env.DB_USERNAME;
 const DB_DEV_PASSWORD = process.env.DB_DEV_PASSWORD;
 const DB_TEST_PASSWORD = process.env.DB_TEST_PASSWORD;
@@ -21,6 +23,7 @@ module.exports = {
     password: DB_TEST_PASSWORD,
     database: DB_DBNAME,
     host: DB_HOST,
+    port: DB_PORT,
     dialect: 'mysql',
   },
   production: {
@@ -28,6 +31,7 @@ module.exports = {
     password: DB_PROD_PASSWORD,
     database: DB_DBNAME,
     host: DB_HOST,
+    port: DB_PORT,
     dialect: 'mysql',
   },
 };

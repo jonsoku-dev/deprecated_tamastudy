@@ -15,10 +15,9 @@ module.exports = () => {
         passwordField: 'password',
       },
       async (email, password, done) => {
-        console.log('im local');
-
         try {
-          const user = await findUserByEmail({ email });
+          const { user } = await findUserByEmail({ email });
+
           if (!user) {
             return done(null, false, { reason: '유저가 존재하지 않습니다. ' });
           }
