@@ -38,3 +38,9 @@ $ npx sequelize-cli seed:generate --name ${name!!}
 ```bash
  $ npx sequelize-cli db:seed:undo:all 
 ```
+
+# Test
+```bash
+$ yarn test or npm run test
+```
+> src/test
