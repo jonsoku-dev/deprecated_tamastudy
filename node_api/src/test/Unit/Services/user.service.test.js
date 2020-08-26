@@ -1,9 +1,32 @@
 const assert = require('chai').assert;
 const expect = require('chai').expect;
 const UserService = require('../../../services/user.service');
+const db = require('../../../db/models');
 
 describe('유저 서비스 테스트', function () {
-  it('createUser', async function () {
+  beforeEach(function (done) {
+    db.sequelize
+      .sync()
+      .then(() => {
+        console.log(`🌟 DB 연결 성공!`);
+        done();
+      })
+      .catch(console.error);
+  });
+
+  afterEach(function (done) {
+    db.sequelize
+      .sync() // create the database table for our model(s)
+      .then(async () => {
+        await db.sequelize.drop();
+      })
+      .then(() => {
+        done();
+      })
+      .catch(console.error);
+  });
+
+  it('createUser', async () => {
     const { user } = await UserService.createUser({
       requestBody: {
         username: 'test',
@@ -12,9 +35,8 @@ describe('유저 서비스 테스트', function () {
       },
     });
     assert.isNotNull(user);
-    await user.destroy();
   });
-  it('findUserById', async function () {
+  it('findUserById', async () => {
     const { user: newUser } = await UserService.createUser({
       requestBody: {
         username: 'test',
@@ -27,9 +49,8 @@ describe('유저 서비스 테스트', function () {
     });
     const username = findUser.username;
     expect(username).to.equal('test');
-    await findUser.destroy();
   });
-  it('findByUserEmail', async function () {
+  it('findByUserEmail', async () => {
     const { user: newUser } = await UserService.createUser({
       requestBody: {
         username: 'test',
@@ -42,6 +63,5 @@ describe('유저 서비스 테스트', function () {
     });
     const email = findUser.email;
     expect(email).to.equal('test@test.com');
-    await findUser.destroy();
   });
 });

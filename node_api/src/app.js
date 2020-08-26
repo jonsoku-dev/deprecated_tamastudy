@@ -11,7 +11,15 @@ const helmet = require('helmet');
 const app = express();
 require('./passport')();
 const routes = require('./routes');
-require('./db/mysqlConnector');
+// require('./db/mysqlConnector');
+const db = require('./db/models');
+
+db.sequelize
+  .sync()
+  .then(() => {
+    console.log(`🌟 DB 연결 성공!`);
+  })
+  .catch(console.error);
 
 const isProd = process.env.NODE_ENV === 'production';
 console.log(process.env.NODE_ENV);

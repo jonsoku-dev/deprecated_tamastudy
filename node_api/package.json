@@ -7,8 +7,13 @@
     "test": "npx env NODE_ENV=test mocha src/test/**/*.*.test.js --reporter spec --exit",
     "dev": "nodemon src/app.js",
     "start": "pm2 start src/app.js",
-    "db:makemigrations": "./node_modules/sequelize-auto-migrations/bin/makemigration.js",
-    "eslint:fix": "eslint . --ext .js --fix"
+    "eslint:fix": "eslint . --ext .js --fix",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:migrate:undo:": "npx sequelize-cli db:migrate:undo",
+    "db:migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
+    "db:seed:all": "npx sequelize-cli db:seed:all ",
+    "db:seed:undo:all": "npx sequelize-cli db:seed:undo:all",
+    "db:create": "npx env NODE_ENV=test sequelize-cli db:create && npx env NODE_ENV=production sequelize-cli db:create && npx env NODE_ENV=development sequelize-cli db:create"
   },
   "author": "",
   "license": "ISC",
@@ -30,7 +35,7 @@
     "passport-local": "^1.0.0",
     "pm2": "^4.4.1",
     "sequelize": "^6.3.4",
-    "sequelize-auto-migrations": "^1.0.3"
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "assert": "^2.0.0",
