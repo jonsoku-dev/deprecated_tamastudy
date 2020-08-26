@@ -6,15 +6,21 @@ import {
   GET_POST_LIST_SUCCESS,
 } from '../../type';
 
-export const getPostListRequestAction = () => ({
+export const getPostListRequestAction = (data) => ({
   type: GET_POST_LIST_REQUEST,
+  data,
 });
 
-const getPostListAPI = () => axios.get('/post/all');
+const getPostListAPI = (data) => {
+  if (data) {
+    return axios.get(`/post/all?cursor=${data.cursor}&limit=${data.limit}`);
+  }
+  return axios.get(`/post/all`);
+};
 
-export function* getPostList() {
+export function* getPostList(action) {
   try {
-    const result = yield call(getPostListAPI);
+    const result = yield call(getPostListAPI, action.data);
     yield put({
       type: GET_POST_LIST_SUCCESS,
       payload: result.data,
