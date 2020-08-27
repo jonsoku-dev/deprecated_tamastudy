@@ -13,7 +13,17 @@ export const getPostListRequestAction = (data) => ({
 
 const getPostListAPI = (data) => {
   if (data) {
-    return axios.get(`/post/all?cursor=${data.cursor}&limit=${data.limit}`);
+    if (data.title && data.CategoryId) {
+      return axios.get(
+        `/post/all?title=${data.title}&CategoryId=${data.CategoryId}`
+      );
+    }
+    if (data.title) {
+      return axios.get(`/post/all?title=${data.title}`);
+    }
+    if (data.CategoryId) {
+      return axios.get(`/post/all?CategoryId=${data.CategoryId}`);
+    }
   }
   return axios.get(`/post/all`);
 };

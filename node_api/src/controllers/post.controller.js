@@ -20,14 +20,31 @@ module.exports.createPost = expressAsyncHandler(async (req, res) => {
 module.exports.getPostList = expressAsyncHandler(async (req, res) => {
   const cursor = req.query.cursor;
   const limit = parseInt(req.query.limit, 10) || 5;
+  const CategoryId = req.query.CategoryId;
+  const title = req.query.title;
   let query = {};
 
   if (cursor) {
-    query = {
-      where: {
-        id: {
-          [Op.lt]: cursor,
-        },
+    query['where'] = {
+      ...query.where,
+      id: {
+        [Op.lt]: cursor,
+      },
+    };
+  }
+
+  if (CategoryId) {
+    query['where'] = {
+      ...query.where,
+      CategoryId,
+    };
+  }
+
+  if (title) {
+    query['where'] = {
+      ...query.where,
+      title: {
+        [Op.like]: '%' + title + '%',
       },
     };
   }
@@ -37,7 +54,6 @@ module.exports.getPostList = expressAsyncHandler(async (req, res) => {
   let { postList } = await findPostList({ query });
   const hasNextPage = postList.length > limit;
   postList = hasNextPage ? postList.slice(0, -1) : postList;
-  console.log(postList.length > limit);
   res.status(200).json({
     postList,
     pageInfo: {

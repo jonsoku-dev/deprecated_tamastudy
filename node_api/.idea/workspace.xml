@@ -20,18 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74812bcb-33e7-47dd-b4d8-c480a8f19ef3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../client/hook/useIntersectionObserver.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/components/forms/PostSearchForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../client/store/actions/post/getMorePostList.action.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/components/layouts/PageLayoutWithNav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../client/components/layouts/PageLayoutWithNav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/pages/post/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/pages/post/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/store/actions/post/getPostList.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/store/actions/post/getPostList.action.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/store/reducers/post.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/store/reducers/post.reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/store/sagas/post.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/store/sagas/post.saga.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/store/type.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/store/type.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/post.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/post.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +107,7 @@
       <workItem from="1597307135651" duration="30507000" />
       <workItem from="1597703671845" duration="26592000" />
       <workItem from="1598221114885" duration="1288000" />
+      <workItem from="1598487340278" duration="2905000" />
     </task>
     <servers />
   </component>
@@ -136,22 +135,22 @@
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
     <state x="3396" y="123" width="1545" height="1195" key="DiffContextDialog/0.23.5120.1417@0.23.5120.1417" timestamp="1598404374151" />
-    <state width="2667" height="397" key="GridCell.Tab.0.bottom" timestamp="1598447889913">
+    <state width="2667" height="397" key="GridCell.Tab.0.bottom" timestamp="1598457023483">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
-    <state width="2667" height="397" key="GridCell.Tab.0.bottom/0.23.5120.1417@0.23.5120.1417" timestamp="1598447889913" />
-    <state width="2667" height="397" key="GridCell.Tab.0.center" timestamp="1598447889912">
+    <state width="2667" height="397" key="GridCell.Tab.0.bottom/0.23.5120.1417@0.23.5120.1417" timestamp="1598457023483" />
+    <state width="2667" height="397" key="GridCell.Tab.0.center" timestamp="1598457023482">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
-    <state width="2667" height="397" key="GridCell.Tab.0.center/0.23.5120.1417@0.23.5120.1417" timestamp="1598447889912" />
-    <state width="2667" height="397" key="GridCell.Tab.0.left" timestamp="1598447889912">
+    <state width="2667" height="397" key="GridCell.Tab.0.center/0.23.5120.1417@0.23.5120.1417" timestamp="1598457023482" />
+    <state width="2667" height="397" key="GridCell.Tab.0.left" timestamp="1598457023469">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
-    <state width="2667" height="397" key="GridCell.Tab.0.left/0.23.5120.1417@0.23.5120.1417" timestamp="1598447889912" />
-    <state width="2667" height="397" key="GridCell.Tab.0.right" timestamp="1598447889913">
+    <state width="2667" height="397" key="GridCell.Tab.0.left/0.23.5120.1417@0.23.5120.1417" timestamp="1598457023469" />
+    <state width="2667" height="397" key="GridCell.Tab.0.right" timestamp="1598457023483">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
-    <state width="2667" height="397" key="GridCell.Tab.0.right/0.23.5120.1417@0.23.5120.1417" timestamp="1598447889913" />
+    <state width="2667" height="397" key="GridCell.Tab.0.right/0.23.5120.1417@0.23.5120.1417" timestamp="1598457023483" />
     <state x="2363" y="357" key="RollbackChangesDialog" timestamp="1597441851055">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
