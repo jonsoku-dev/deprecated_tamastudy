@@ -103,7 +103,7 @@ describe('Post 서비스 테스트', function () {
       },
       UserId: 1,
     });
-    const { postList } = await PostService.findPostList({});
+    const postList = await PostService.findPostList({});
     expect(postList.length).to.equal(2);
   });
 });

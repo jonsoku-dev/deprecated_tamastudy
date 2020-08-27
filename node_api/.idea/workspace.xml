@@ -4,10 +4,6 @@
     <expand>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
@@ -20,18 +16,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74812bcb-33e7-47dd-b4d8-c480a8f19ef3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/controllers/openchat.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/openchat.route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Unit/Services/category.service.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Unit/Services/comment.service.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Unit/Services/notice.service.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Unit/Services/openchat.service.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Unit/Services/post.service.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/models/category.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/models/category.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Unit/Services/notice.service.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Unit/Services/notice.service.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/Unit/Services/post.service.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Unit/Services/post.service.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +105,7 @@
       <workItem from="1597703671845" duration="26592000" />
       <workItem from="1598221114885" duration="1288000" />
       <workItem from="1598487340278" duration="3279000" />
-      <workItem from="1598521450277" duration="5686000" />
+      <workItem from="1598521450277" duration="12877000" />
     </task>
     <servers />
   </component>
@@ -182,9 +169,9 @@
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
     <state x="3876" y="459" width="584" height="580" key="find.popup/0.23.5120.1417@0.23.5120.1417" timestamp="1598419385446" />
-    <state x="1702" y="348" width="670" height="676" key="search.everywhere.popup" timestamp="1598525514940">
+    <state x="1702" y="348" width="670" height="676" key="search.everywhere.popup" timestamp="1598546085299">
       <screen x="0" y="23" width="5120" height="1417" />
     </state>
-    <state x="1702" y="348" width="670" height="676" key="search.everywhere.popup/0.23.5120.1417@0.23.5120.1417" timestamp="1598525514940" />
+    <state x="1702" y="348" width="670" height="676" key="search.everywhere.popup/0.23.5120.1417@0.23.5120.1417" timestamp="1598546085299" />
   </component>
 </project>

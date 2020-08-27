@@ -1,10 +1,7 @@
 const expressAsyncHandler = require('express-async-handler');
-const Sequelize = require('sequelize');
-const Op = Sequelize.Op;
 
 const {
   findPostById,
-  findPostList,
   createPost,
   updatePostById,
 } = require('../services/post.service');
@@ -18,49 +15,7 @@ module.exports.createPost = expressAsyncHandler(async (req, res) => {
 });
 
 module.exports.getPostList = expressAsyncHandler(async (req, res) => {
-  const cursor = req.query.cursor;
-  const limit = parseInt(req.query.limit, 10) || 5;
-  const CategoryId = req.query.CategoryId;
-  const title = req.query.title;
-  let query = {};
-
-  if (cursor) {
-    query['where'] = {
-      ...query.where,
-      id: {
-        [Op.lt]: cursor,
-      },
-    };
-  }
-
-  if (CategoryId) {
-    query['where'] = {
-      ...query.where,
-      CategoryId,
-    };
-  }
-
-  if (title) {
-    query['where'] = {
-      ...query.where,
-      title: {
-        [Op.like]: '%' + title + '%',
-      },
-    };
-  }
-
-  query = { ...query, limit: limit + 1 };
-
-  let { postList } = await findPostList({ query });
-  const hasNextPage = postList.length > limit;
-  postList = hasNextPage ? postList.slice(0, -1) : postList;
-  res.status(200).json({
-    postList,
-    pageInfo: {
-      nextPageCursor: hasNextPage ? postList[postList.length - 1].id : null,
-      hasNextPage,
-    },
-  });
+  res.status(200).json(req.advancedResults);
 });
 
 module.exports.getPost = expressAsyncHandler(async (req, res) => {
