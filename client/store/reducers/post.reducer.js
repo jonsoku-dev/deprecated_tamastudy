@@ -10,6 +10,9 @@ import {
   EDIT_POST_REQUEST,
   EDIT_POST_SUCCESS,
   GET_POST_FAIL,
+  GET_MORE_POST_LIST_FAIL,
+  GET_MORE_POST_LIST_REQUEST,
+  GET_MORE_POST_LIST_SUCCESS,
   GET_POST_LIST_FAIL,
   GET_POST_LIST_REQUEST,
   GET_POST_LIST_SUCCESS,
@@ -35,6 +38,10 @@ const initialState = {
   getPostListLoading: false,
   getPostListDone: false,
   getPostListError: null,
+  // 포스트 리스트 (+query) 불러오기
+  getMorePostListLoading: false,
+  getMorePostListDone: false,
+  getMorePostListError: null,
   // 포스트 불러오기
   getPostLoading: false,
   getPostDone: false,
@@ -92,7 +99,7 @@ const reducer = (state = initialState, action) =>
         draft.getPostListLoading = false;
         draft.getPostListDone = true;
         draft.getPostListError = null;
-        draft.postList = [...draft.postList, ...action.payload.postList];
+        draft.postList = action.payload.postList;
         draft.pageInfo = action.payload.pageInfo;
         break;
       }
@@ -100,6 +107,27 @@ const reducer = (state = initialState, action) =>
         draft.getPostListLoading = false;
         draft.getPostListDone = false;
         draft.getPostListError = action.error;
+        break;
+      }
+      // 포스트 리스트 (for infinite scroll) 불러오기
+      case GET_MORE_POST_LIST_REQUEST: {
+        draft.getMorePostListLoading = true;
+        draft.getMorePostListDone = false;
+        draft.getMorePostListError = null;
+        break;
+      }
+      case GET_MORE_POST_LIST_SUCCESS: {
+        draft.getMorePostListLoading = false;
+        draft.getMorePostListDone = true;
+        draft.getMorePostListError = null;
+        draft.postList = [...draft.postList, ...action.payload.postList];
+        draft.pageInfo = action.payload.pageInfo;
+        break;
+      }
+      case GET_MORE_POST_LIST_FAIL: {
+        draft.getMorePostListLoading = false;
+        draft.getMorePostListDone = false;
+        draft.getMorePostListError = action.error;
         break;
       }
       // 포스트 불러오기
