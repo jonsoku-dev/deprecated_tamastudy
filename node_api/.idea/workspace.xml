@@ -20,21 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74812bcb-33e7-47dd-b4d8-c480a8f19ef3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../client/components/forms/PostSearchForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/store/actions/post/getMorePostList.action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/openchat.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/db/models/openchat.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/openchat.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/openchat.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/pages/post/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/pages/post/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/store/actions/post/getPostList.action.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/store/actions/post/getPostList.action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/store/reducers/post.reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/store/reducers/post.reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/store/sagas/post.saga.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/store/sagas/post.saga.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../client/store/type.js" beforeDir="false" afterPath="$PROJECT_DIR$/../client/store/type.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/post.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/models/category.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/models/category.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -107,7 +113,8 @@
       <workItem from="1597307135651" duration="30507000" />
       <workItem from="1597703671845" duration="26592000" />
       <workItem from="1598221114885" duration="1288000" />
-      <workItem from="1598487340278" duration="2905000" />
+      <workItem from="1598487340278" duration="3279000" />
+      <workItem from="1598521450277" duration="2199000" />
     </task>
     <servers />
   </component>
