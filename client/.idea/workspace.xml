@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6abbbcf-02aa-45bf-a85a-ac0845627f5e" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/../node_api/src/controllers/openchat.controller.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../node_api/src/routes/openchat.route.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../node_api/src/test/Unit/Services/category.service.test.js" afterDir="false" />
@@ -27,11 +28,20 @@
       <change afterPath="$PROJECT_DIR$/../node_api/src/test/Unit/Services/notice.service.test.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../node_api/src/test/Unit/Services/openchat.service.test.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../node_api/src/test/Unit/Services/post.service.test.js" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/../node_api/src/routes/middlewares/advancedResults.js" afterDir="false" />
+>>>>>>> [JDNS-25-advanced-results] 테스트 전
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../node_api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_api/src/controllers/notice.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/controllers/notice.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_api/src/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/controllers/post.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../node_api/src/db/models/category.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/db/models/category.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_api/src/db/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/db/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_api/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_api/src/db/seeders/20200826013338-post.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/db/seeders/20200826013338-post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_api/src/routes/comment.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/routes/comment.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_api/src/routes/notice.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/routes/notice.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_api/src/routes/post.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/routes/post.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_api/src/services/notice.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/services/notice.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_api/src/services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/services/post.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +133,11 @@
       <workItem from="1598012907827" duration="52919000" />
       <workItem from="1598221113766" duration="1143000" />
       <workItem from="1598487343864" duration="7219000" />
+<<<<<<< HEAD
       <workItem from="1598521470844" duration="1195000" />
+=======
+      <workItem from="1598521470844" duration="2045000" />
+>>>>>>> [JDNS-25-advanced-results] 테스트 전
     </task>
     <servers />
   </component>

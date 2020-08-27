@@ -94,7 +94,7 @@ describe('Notice 서비스 테스트', function () {
       },
       UserId: 1,
     });
-    const { noticeList } = await NoticeService.findNoticeList({});
+    const noticeList = await NoticeService.findNoticeList({});
     expect(noticeList.length).to.equal(2);
   });
 });
