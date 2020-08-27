@@ -21,9 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a6abbbcf-02aa-45bf-a85a-ac0845627f5e" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../node_api/src/controllers/openchat.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_api/src/db/models/openchat.model.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../node_api/src/routes/openchat.route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../node_api/src/services/openchat.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../node_api/src/test/Unit/Services/category.service.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../node_api/src/test/Unit/Services/comment.service.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../node_api/src/test/Unit/Services/notice.service.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../node_api/src/test/Unit/Services/openchat.service.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../node_api/src/test/Unit/Services/post.service.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../node_api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../node_api/src/db/models/category.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_api/src/db/models/category.model.js" afterDir="false" />
@@ -120,7 +123,7 @@
       <workItem from="1598012907827" duration="52919000" />
       <workItem from="1598221113766" duration="1143000" />
       <workItem from="1598487343864" duration="7219000" />
-      <workItem from="1598521470844" duration="596000" />
+      <workItem from="1598521470844" duration="1195000" />
     </task>
     <servers />
   </component>
