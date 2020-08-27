@@ -30,7 +30,7 @@ module.exports = class Category extends Model {
         allowNull: false,
       },
     });
-    db.Openchat.hasOne(db.Post, {
+    db.Category.hasOne(db.Openchat, {
       foreignKey: {
         field: 'CategoryId',
         allowNull: false,
